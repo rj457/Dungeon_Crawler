@@ -9,9 +9,6 @@ public class ButtonController : MonoBehaviour
 {
     public GameObject Drop;
     public countDownTimer timer;
-    public GameObject startmenu;
-    public TMP_InputField tmp;
-    public GameObject Endsresult;
     public bool Onstart=false; 
     //get all the sheep 
     public GameObject Sheep;
@@ -34,8 +31,6 @@ public class ButtonController : MonoBehaviour
     public void OnStartButton()
     {
         Onstart = true;
-        startmenu.SetActive(false);
-        timer.startTime = float.Parse(tmp.text);
         Drop.SetActive(true);
         startmoving();
         resetsheep(); 
@@ -50,8 +45,6 @@ public class ButtonController : MonoBehaviour
     public void OnResetButton()
     {
         Onstart = false; 
-        Endsresult.SetActive(false);
-        startmenu.SetActive(true);
         battlesystem.infectcount = 0;
         playercollider.Fillheart(); 
     }

@@ -1,0 +1,5 @@
+How to smoothly transitioning the open dungeon into interesting encounter?
+
+1. Two aspects of design:
+	1. player are trying to lead a bunch of uninfected person through a narrow 	space, and on the way player can bring the infected person on the side to join 	the main stream of escaping group. 
+	2. In a packed escaped elevator that will asend to another level. player has 	to protect either side of persons to be safe from intecting each others.  

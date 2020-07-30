@@ -18,8 +18,6 @@ public class PlayerCollision : MonoBehaviour
     //bool logic pravite 
     private bool IsInRangeWithCM = false;
     private bool IsNOTFirstTime = true;
-    private bool IsInRangeWithAllies = false;
-    private bool IsInRangeWithAllies1 = false; 
     //get caveman diolog stages; 
     public GameObject firstdialog;
     public GameObject seconddialog;
@@ -32,42 +30,45 @@ public class PlayerCollision : MonoBehaviour
     public Playermovement playermovement;
     public Animator anim;
     public GameObject Shield;
-    public AIPath AID; 
-    public AIPath AID1;
     //grab player battle result
     public BattleResult BattleResult;
     public GameObject winend; // with 
     public GameObject winend1; //without
-    
+    //inventory
+    private bool Isopen = false;
+    public GameObject inventory; 
+
     //update per fame
     void Update()
     {
         checkCM();
         checkshield();
-        checkAllies();
-        checkIsFollow();
         //update health in runtime; 
         checkhealth();
+        checkinventory();
     }
 
+    void checkinventory()
+    {
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            if (Isopen == false)
+            {
+                inventory.SetActive(true);
+                Isopen = true;
+            }
+            else
+            {
+                inventory.SetActive(false);
+                Isopen = false;
+            }
+        }
+    }
     void checkhealth()
     {
         healthBar.SetHealth(recordplayer.playerhealth);
     }
 
-    void checkIsFollow()
-    {
-        if (recordplayer.IsFollow==true)
-        {
-            AID.enabled = true;
-            AID1.enabled = true; 
-        }
-        else if (recordplayer.IsFollow==false)
-        {
-            AID.enabled = false;
-            AID1.enabled = false; 
-        }
-    }
 
     //functions calls caveman speaking
     void checkCM()
@@ -77,16 +78,6 @@ public class PlayerCollision : MonoBehaviour
             firstdialog.SetActive(false);
             seconddialog.SetActive(true);
             IsNOTFirstTime = false; 
-        }
-    }
-    void checkAllies()
-    {
-        if(IsInRangeWithAllies && Input.GetKeyDown(KeyCode.N)){
-            AID1.enabled = true; 
-        }
-        if(IsInRangeWithAllies1 && Input.GetKeyDown(KeyCode.N))
-        {
-            AID.enabled = true; 
         }
     }
 
@@ -159,19 +150,10 @@ public class PlayerCollision : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.gameObject.tag == "Allies")
-        {
-            IsInRangeWithAllies = true;
-            recordplayer.IsFollow = true; 
-        }
-        if(collision.gameObject.tag == "Allies1")
-        {
-            IsInRangeWithAllies1 = true;
-            recordplayer.IsFollow = true; 
-        }
-    }
+    //void OnCollisionEnter2D(Collision2D collision)
+    //{
+
+    //}
 
     IEnumerator PlayerEngage()
     {
