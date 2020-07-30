@@ -2,17 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+[CreateAssetMenu]
+public class InventoryObject : ScriptableObject
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public int uninfectedallies;
+    public int infectedallies;
+    public bool alliesisfollow;
+    public bool allies1isfollow;
+    public List<string> enemyTag;
+    //battle position
+    public Vector3 initialvalue;
+    public bool Isbattle;
+    public Vector3 allies;
+    public Vector3 allies1;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public Vector3 alliesinitialvalue = new Vector3(-10.51F, -4.37F, -1F);
+    public Vector3 allies1initialvalue = new Vector3(10.47F, 3.59F, -1F);
 }

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
@@ -11,8 +12,17 @@ public class sheepbehavior : MonoBehaviour
     public float goesright;
     private Vector3 movement;
     public SpriteRenderer SR;
-    public bool IsInfected = false;
-    
+    public bool IsInfected;
+    //attack pattern
+    public GameObject virus;
+    public int virusCount;
+    public float startWait;
+    public float spawnWait;
+    public float waveWait;
+    //sqawn at random spots 
+    public Transform[] sqawnspot;
+    private int randomspot;
+    Vector3 spawnPosition;
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +38,8 @@ public class sheepbehavior : MonoBehaviour
     {
         movement = new Vector3(goesright, 0f, 0f);
         Rigidbody2D.velocity = movement * speed;
-        Checkinfection(); 
+        Checkinfection();
+        
     }
 
     void Checkinfection()
@@ -36,7 +47,8 @@ public class sheepbehavior : MonoBehaviour
         if (SR.color == Color.red)
         {
             IsInfected = true;
-            speed = 1.5f; 
+            speed = 1.5f;
+            StartAttackpattern();
         }
         else
         {
@@ -44,6 +56,25 @@ public class sheepbehavior : MonoBehaviour
             speed = 3f; 
         }
     }
+    void StartAttackpattern()
+    {
+        waveWait -= 1 * Time.deltaTime;
+        if (waveWait <= 0)
+        {
+            for (int i = 0; i < sqawnspot.Count(); i++)
+            {
+                //generatespot();
+                spawnPosition = sqawnspot[i].position;
+                Instantiate(virus, spawnPosition, Quaternion.identity);
+
+            }
+            waveWait = spawnWait;
+        }
+    }
+    //void generatespot()
+    //{
+    //    randomspot = Random.Range(0, sqawnspot.Length); 
+    //}
 
     void OnCollisionEnter2D(Collision2D collision)
     {

@@ -9,13 +9,13 @@ public class Reset : MonoBehaviour
     // Start is called before the first frame update
     public GameObject shield;
     public recordplayer recordplayer;
-    public AIPath allies;
-    public AIPath allies1;
-    public VectorValue alliesoriginal;
-    public Transform alliesposition;
-    public Transform allies1position;
+    public GameObject allies;
+    public GameObject allies1;
     public GameObject winend;
-    public GameObject winend1; 
+    public GameObject winend1;
+    public InventoryObject infectionrecord;
+    //enemy object 
+    public List<GameObject> enemylists;
 
     public void OnResetButton()
     {
@@ -23,19 +23,38 @@ public class Reset : MonoBehaviour
         shield.SetActive(true);
         recordplayer.playerhealth = 100;
         recordplayer.IsFollow = false;
-        allies.enabled = false;
-        allies1.enabled = false;
         winend.SetActive(false);
-        winend1.SetActive(false); 
-        resetalliesposition(); 
+        winend1.SetActive(false);
+        resetallies();
+        restartenemy();
+        clearenemyencounterlist(); 
     }
-    void resetalliesposition()
-    {
-        alliesposition.position = alliesoriginal.alliesinitialvalue;
-        allies1position.position = alliesoriginal.allies1initialvalue; 
-    }
+  
     public void OnQuitButton()
     {
         Application.Quit(); 
+    }
+    void resetallies()
+    {
+        allies.SetActive(true);
+        allies1.SetActive(true);
+        infectionrecord.alliesisfollow = false;
+        infectionrecord.allies1isfollow = false;
+        infectionrecord.infectedallies = 0;
+        infectionrecord.uninfectedallies = 0; 
+    }
+    void restartenemy()
+    {
+        foreach (GameObject enemy in enemylists)
+        {
+            if (enemy.activeSelf == false)
+            {
+                enemy.SetActive(true); 
+            }
+        }
+    }
+    void clearenemyencounterlist()
+    {
+        infectionrecord.enemyTag.Clear(); 
     }
 }

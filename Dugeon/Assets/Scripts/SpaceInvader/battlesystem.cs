@@ -3,41 +3,80 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class battlesystem : MonoBehaviour
 {
-    public int infectcount; 
+    //public int infectcount; 
     public playercollider heartcount;
-    public GameObject sheep;
-    public GameObject sheep1;
-    public GameObject sheep2;
-
-    public GameObject Drop;
-
+    //decide how many allies to spawn 
+    public InventoryObject infectionrecord; 
+    //allies prefab     
+    public GameObject sheepPrefab;
+    public Animator transition;
+    public countDownTimer timer; 
     public List<bool> sheeplist;
+    public GameObject[] sheeps = null;
+    private bool Isend = false; 
     // Start is called before the first frame update
     void Start()
     {
-        infectcount = 0;
+        sqawnsheep(); 
+    }
+
+    void sqawnsheep()
+    {
+        //if (infectionrecord.uninfectedallies > 0)
+        //{
+        while (infectionrecord.uninfectedallies != 0)
+        {
+            Vector3 spawnPosition = new Vector3(Random.Range(-11f, 11f), -5.5f, 10f);
+            Instantiate(sheepPrefab, spawnPosition, Quaternion.identity);
+            infectionrecord.uninfectedallies -= 1; 
+        }
+        //}
     }
 
     // Update is called once per frame
     void Update()
-    { //
-        if (heartcount.listgameobjects.Count == 0)
+    { 
+        if ((heartcount.listgameobjects.Count == 0 || timer.currentTime == 0) && Isend == false)
         {
-            checkinfectedsheep();
+            StartCoroutine(exitencounter());
+            Isend = true; 
         }
+       
     }
-    void checkinfectedsheep()
+    void updateinfectionrecord()
     {
-        sheeplist = new List<bool> { sheep.GetComponent<sheepbehavior>().IsInfected, sheep1.GetComponent<sheepbehavior>().IsInfected, sheep2.GetComponent<sheepbehavior>().IsInfected };
-        for (int i = 0; i < sheeplist.Count; i++)
+        sheeps = GameObject.FindGameObjectsWithTag("Allies");
+        foreach (GameObject sheep in sheeps)
         {
-            if (sheeplist[i] == true)
+            if (sheep.GetComponent<sheepbehavior>().IsInfected)
             {
-                infectcount += 1; 
+                infectionrecord.infectedallies += 1; 
+            }
+            else
+            {
+                infectionrecord.uninfectedallies += 1; 
             }
         }
+        //sheeplist = new List<bool> { sheep.GetComponent<sheepbehavior>().IsInfected, sheep1.GetComponent<sheepbehavior>().IsInfected, sheep2.GetComponent<sheepbehavior>().IsInfected };
+        //for (int i = 0; i < sheeplist.Count; i++)
+        //{
+        //    if (sheeplist[i] == true)
+        //    {
+        //        infectcount += 1;
+        //    }
+        //}
+    }
+
+
+    IEnumerator exitencounter()
+    {
+        transition.SetTrigger("Start");
+        updateinfectionrecord();
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(1);
     }
 }

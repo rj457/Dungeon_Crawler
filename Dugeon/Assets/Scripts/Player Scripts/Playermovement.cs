@@ -15,23 +15,22 @@ public class Playermovement : MonoBehaviour
     public bool IsLeft = false;
     Vector2 movement;
     //userdata
-    public VectorValue startingpoint;
     public recordplayer recordPlayer;
     //grab player health
     public HealthBar playerhealth;
     public GameObject shield;
-    public BattleResult BattleResult;
+    public InventoryObject infectionrecord; 
 
     
 
     void Start()
     {
         
-        if (startingpoint.Isbattle)
+        if (infectionrecord.Isbattle)
         {
-            startingpoint.Isbattle = false;
+            infectionrecord.Isbattle = false;
             StartCoroutine(Waittime(2));
-            transform.position = startingpoint.initialvalue;
+            transform.position = infectionrecord.initialvalue;
         }
         if (moveSpeed == 0)
         {
@@ -51,22 +50,11 @@ public class Playermovement : MonoBehaviour
             helo.SetActive(false);
             shield.SetActive(true);
         }
-        checkBattleResult();
 
         playerhealth.SetHealth(recordplayer.playerhealth); 
         
     }
     
-
-    void checkBattleResult()
-    {
-        if (BattleResult.IsPlayerWin == true)
-        {
-            Debug.Log(BattleResult.enemyTag);
-            GameObject targetenemy = GameObject.FindGameObjectWithTag(BattleResult.enemyTag);
-            targetenemy.SetActive(false); 
-        }
-    }
 
     IEnumerator Waittime(int time)
     {

@@ -13,8 +13,9 @@ public class AlliesCollision : MonoBehaviour
     string secondSentence = "Player:\n Come to my universe and stay for now. It is safe.";
     bool safenet = true; 
     bool istouchPlayer = false;
-
-
+    public bool Isinfected;
+    public InventoryObject infectionrecord;
+ 
     void Update()
     {
 
@@ -30,9 +31,22 @@ public class AlliesCollision : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             istouchPlayer = true;
+            //update infection to object 
+            updateinfection(); 
         }
     }
  
+    void updateinfection()
+    {
+        if (Isinfected)
+        {
+            infectionrecord.infectedallies += 1;
+        }
+        else
+        {
+            infectionrecord.uninfectedallies += 1; 
+        }
+    }
     IEnumerator dialogStart()
     {
         safenet = false; 
@@ -44,8 +58,21 @@ public class AlliesCollision : MonoBehaviour
         textpro.text = secondSentence;
         yield return new WaitForSeconds(3f);
         rescueDialog.SetActive(false);
+        //update following status
+        updateSqawn();
         //distroy object 
         gameObject.SetActive(false);
 
+    }
+    void updateSqawn()
+    {
+        if (gameObject.name == "allies")
+        {
+            infectionrecord.alliesisfollow = true; 
+        }
+        else if (gameObject.name == "allies(1)")
+        {
+            infectionrecord.allies1isfollow = true; 
+        }
     }
 }

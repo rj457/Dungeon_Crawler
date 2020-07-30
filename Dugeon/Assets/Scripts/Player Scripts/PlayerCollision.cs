@@ -24,20 +24,22 @@ public class PlayerCollision : MonoBehaviour
     //get animator 
     public Animator transition;
     //player location before enter battle
-    public VectorValue playerstorage;
     public recordplayer recordplayer; 
     //public recordplayer recordplayer; 
     public Playermovement playermovement;
     public Animator anim;
     public GameObject Shield;
     //grab player battle result
-    public BattleResult BattleResult;
     public GameObject winend; // with 
     public GameObject winend1; //without
     //inventory
     private bool Isopen = false;
-    public GameObject inventory; 
-
+    public GameObject inventory;
+    public InventoryObject infectionrecord;
+    //inventroy object infection counts 
+    public TextMeshProUGUI infectedcounts;
+    public TextMeshProUGUI uninfectedcounts;
+    
     //update per fame
     void Update()
     {
@@ -55,6 +57,9 @@ public class PlayerCollision : MonoBehaviour
             if (Isopen == false)
             {
                 inventory.SetActive(true);
+                //update information from alliesinfected object 
+                infectedcounts.text = "Infected Allies Count: " + infectionrecord.infectedallies.ToString("0");
+                uninfectedcounts.text = "Uninfected Aliies Count: " + infectionrecord.uninfectedallies.ToString("0");
                 Isopen = true;
             }
             else
@@ -123,15 +128,9 @@ public class PlayerCollision : MonoBehaviour
 
         if (collider.gameObject.tag == "Enemies")
         {
-            playerstorage.Isbattle = true;
-            playermovement.moveSpeed = 0;
-            anim.enabled = false;
             //which enemy encounter 
-            BattleResult.enemyTag = collider.gameObject.transform.parent.tag; 
-            //recored last check point
-            playerstorage.initialvalue.x = transform.position.x - 1;
-            playerstorage.initialvalue.y = transform.position.y;
-            playerstorage.initialvalue.z = transform.position.z;
+            infectionrecord.enemyTag.Add(collider.gameObject.transform.parent.tag);
+            updateinfectionrecord(); 
             StartCoroutine(PlayerEngage());
         }
 
@@ -150,15 +149,22 @@ public class PlayerCollision : MonoBehaviour
         }
     }
 
-    //void OnCollisionEnter2D(Collision2D collision)
-    //{
-
-    //}
+    void updateinfectionrecord()
+    {
+        infectionrecord.Isbattle = true;
+        playermovement.moveSpeed = 0;
+        anim.enabled = false;
+        infectionrecord.infectedallies += 1;
+        //recored last check point
+        infectionrecord.initialvalue.x = transform.position.x;
+        infectionrecord.initialvalue.y = transform.position.y;
+        infectionrecord.initialvalue.z = transform.position.z;
+    }
 
     IEnumerator PlayerEngage()
     {
         transition.SetTrigger("Start");
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
         SceneManager.LoadScene(2);
     }
 }
