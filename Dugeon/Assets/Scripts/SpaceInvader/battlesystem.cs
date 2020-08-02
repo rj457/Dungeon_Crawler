@@ -13,28 +13,47 @@ public class battlesystem : MonoBehaviour
     public InventoryObject infectionrecord; 
     //allies prefab     
     public GameObject sheepPrefab;
+    public GameObject wolfPrefab; 
     public Animator transition;
-    public countDownTimer timer; 
+    public countDownTimer timer;
+    public GameObject timertext; 
     public List<bool> sheeplist;
     public GameObject[] sheeps = null;
     private bool Isend = false; 
     // Start is called before the first frame update
     void Start()
     {
-        sqawnsheep(); 
+        checkstartcondition();
+        sqawnsheep();
+        sqawnwolf();
+    }
+    void checkstartcondition()
+    {
+        if (infectionrecord.uninfectedallies == 0 && infectionrecord.infectedallies == 0)
+        {
+            StartCoroutine(exitearly()); 
+        }
     }
 
+    void sqawnwolf()
+    {
+        while (infectionrecord.infectedallies != 0 )
+        {
+            List<Vector3> sqawnareas = new List<Vector3> {new Vector3(Random.Range(-9.71f,-5.9f),3.91f,10f), new Vector3(Random.Range(-2.18f, 2.12f), 3.91f, 10f),
+                new Vector3(Random.Range(5.71f, 9.78f), 3.91f, 10f)};
+            int randspots = Random.Range(0, sqawnareas.Count - 1);
+            Instantiate(wolfPrefab, sqawnareas[randspots], Quaternion.identity);
+            infectionrecord.infectedallies -= 1; 
+        }
+    }
     void sqawnsheep()
     {
-        //if (infectionrecord.uninfectedallies > 0)
-        //{
         while (infectionrecord.uninfectedallies != 0)
         {
             Vector3 spawnPosition = new Vector3(Random.Range(-11f, 11f), -5.5f, 10f);
             Instantiate(sheepPrefab, spawnPosition, Quaternion.identity);
             infectionrecord.uninfectedallies -= 1; 
         }
-        //}
     }
 
     // Update is called once per frame
@@ -52,7 +71,7 @@ public class battlesystem : MonoBehaviour
         sheeps = GameObject.FindGameObjectsWithTag("Allies");
         foreach (GameObject sheep in sheeps)
         {
-            if (sheep.GetComponent<sheepbehavior>().IsInfected)
+            if (sheep.GetComponent<wolfBehavior>().IsInfected)
             {
                 infectionrecord.infectedallies += 1; 
             }
@@ -71,7 +90,12 @@ public class battlesystem : MonoBehaviour
         //}
     }
 
-
+    IEnumerator exitearly()
+    {
+        timertext.SetActive(true);
+        yield return new WaitForSeconds(100f);
+        SceneManager.LoadScene(1);
+    }
     IEnumerator exitencounter()
     {
         transition.SetTrigger("Start");

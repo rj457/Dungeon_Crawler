@@ -11,4 +11,12 @@ public class Shieldfollow : MonoBehaviour
         transform.position = new Vector3(player.transform.position.x, player.transform.position.y + 0.5f, player.transform.position.z);
         
     }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Virus")
+        {
+            Destroy(collision.gameObject);
+        }
+    }
 }

@@ -12,10 +12,13 @@ public class PlayerSkill : MonoBehaviour
     public GameObject Walldown;
     private Vector3 downcastposition;
     public GameObject downHeal;
+    private Vector3 upcastposition;
+    public GameObject maskUP; 
     private float skillcooldownleft = 11;
     private float skillcooldownright = 11;
     private float skillcooldowndown = 11;
-    private float skillcooldownHeal = 11; 
+    private float skillcooldownHeal = 11;
+    private float skillcooldownmask = 11; 
 
     // Update is called once per frame
     void Update()
@@ -23,6 +26,7 @@ public class PlayerSkill : MonoBehaviour
         leftcastposition = new Vector3(transform.position.x - 1,transform.position.y,transform.position.z);
         rightcastposition = new Vector3(transform.position.x + 1, transform.position.y, transform.position.z);
         downcastposition = new Vector3(transform.position.x, transform.position.y - 1, transform.position.z);
+        upcastposition = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z); 
         FireShield();
 
     }
@@ -66,6 +70,15 @@ public class PlayerSkill : MonoBehaviour
                 StartCoroutine(skillcountdownHeal()); 
             }
         }
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            if (skillcooldownmask > 10)
+            {
+                skillcooldownmask = 0;
+                Instantiate(maskUP, upcastposition, Quaternion.identity);
+                StartCoroutine(skillcountdownmask());
+            }
+        }
     }
 
     IEnumerator skillcountdownleft()
@@ -87,5 +100,10 @@ public class PlayerSkill : MonoBehaviour
     {
         yield return new WaitForSeconds(2);
         skillcooldownHeal = 11; 
+    }
+    IEnumerator skillcountdownmask()
+    {
+        yield return new WaitForSeconds(2);
+        skillcooldownmask = 11;
     }
 }

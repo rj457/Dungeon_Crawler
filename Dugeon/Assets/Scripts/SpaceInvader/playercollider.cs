@@ -33,7 +33,7 @@ public class playercollider : MonoBehaviour
     {
         if (collision.gameObject.tag == "Allies")
         {
-            bool isinfected = collision.gameObject.GetComponent<sheepbehavior>().IsInfected;
+            bool isinfected = collision.gameObject.GetComponent<wolfBehavior>().IsInfected;
             if (isinfected)
             {
                 takeDamage();

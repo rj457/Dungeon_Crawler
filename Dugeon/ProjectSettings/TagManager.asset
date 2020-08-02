@@ -20,6 +20,7 @@ TagManager:
   - Ground
   - Virus
   - Healbar
+  - Mask
   layers:
   - Default
   - TransparentFX

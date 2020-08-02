@@ -14,15 +14,15 @@ public class sheepbehavior : MonoBehaviour
     public SpriteRenderer SR;
     public bool IsInfected;
     //attack pattern
-    public GameObject virus;
-    public int virusCount;
-    public float startWait;
-    public float spawnWait;
-    public float waveWait;
+    //public GameObject virus;
+    //public int virusCount;
+    //public float startWait;
+    //public float spawnWait;
+    //public float waveWait;
     //sqawn at random spots 
-    public Transform[] sqawnspot;
-    private int randomspot;
-    Vector3 spawnPosition;
+    //public Transform[] sqawnspot;
+    //private int randomspot;
+    //Vector3 spawnPosition;
 
     // Start is called before the first frame update
     void Start()
@@ -48,7 +48,7 @@ public class sheepbehavior : MonoBehaviour
         {
             IsInfected = true;
             speed = 1.5f;
-            StartAttackpattern();
+            //StartAttackpattern();
         }
         else
         {
@@ -56,21 +56,21 @@ public class sheepbehavior : MonoBehaviour
             speed = 3f; 
         }
     }
-    void StartAttackpattern()
-    {
-        waveWait -= 1 * Time.deltaTime;
-        if (waveWait <= 0)
-        {
-            for (int i = 0; i < sqawnspot.Count(); i++)
-            {
-                //generatespot();
-                spawnPosition = sqawnspot[i].position;
-                Instantiate(virus, spawnPosition, Quaternion.identity);
+    //void StartAttackpattern()
+    //{
+    //    waveWait -= 1 * Time.deltaTime;
+    //    if (waveWait <= 0)
+    //    {
+    //        for (int i = 0; i < sqawnspot.Count(); i++)
+    //        {
+    //            //generatespot();
+    //            spawnPosition = sqawnspot[i].position;
+    //            Instantiate(virus, spawnPosition, Quaternion.identity);
 
-            }
-            waveWait = spawnWait;
-        }
-    }
+    //        }
+    //        waveWait = spawnWait;
+    //    }
+    //}
     //void generatespot()
     //{
     //    randomspot = Random.Range(0, sqawnspot.Length); 

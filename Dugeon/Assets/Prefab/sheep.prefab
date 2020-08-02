@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6428347051934416582}
   - component: {fileID: 6428347051934416583}
   - component: {fileID: 6428347051934416580}
-  - component: {fileID: 6428347051934416581}
+  - component: {fileID: 3889503640902393664}
   m_Layer: 0
   m_Name: sheep
   m_TagString: Allies
@@ -132,7 +132,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.29, y: 1.2}
   m_EdgeRadius: 0
---- !u!114 &6428347051934416581
+--- !u!114 &3889503640902393664
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6428347051934416578}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b154c47f63faf34c90fe318c8838fda, type: 3}
+  m_Script: {fileID: 11500000, guid: 57f7452a142fd8f459415427390555cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Rigidbody2D: {fileID: 6428347051934416583}
