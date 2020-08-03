@@ -5,14 +5,13 @@ using UnityEngine;
 
 public class PickBarrel : MonoBehaviour
 {
-    public GameObject player;
-    public Transform transform;
+    public GameObject player;   
     public CapsuleCollider2D CC; 
 
     // Start is called before the first frame update
     void Start()
     {
-        transform = GetComponent<Transform>();
+        
         CC = GetComponent<CapsuleCollider2D>(); 
     }
 

@@ -31,7 +31,7 @@ public class PlayerCollision : MonoBehaviour
     public GameObject Shield;
     //grab player battle result
     public GameObject winend; // with 
-    public GameObject winend1; //without
+    //public GameObject winend1; //without
     //inventory
     private bool Isopen = false;
     public GameObject inventory;
@@ -39,6 +39,9 @@ public class PlayerCollision : MonoBehaviour
     //inventroy object infection counts 
     public TextMeshProUGUI infectedcounts;
     public TextMeshProUGUI uninfectedcounts;
+    //win end title 
+    public TextMeshProUGUI winendtitle;
+    public TextMeshProUGUI winmessage; 
     
     //update per fame
     void Update()
@@ -136,15 +139,17 @@ public class PlayerCollision : MonoBehaviour
 
         if(collider.gameObject.tag == "Door")
         {
-            if (recordplayer.IsFollow)
+            winend.SetActive(true);
+            
+            if (infectionrecord.uninfectedallies > infectionrecord.infectedallies)
             {
-                winend.SetActive(true);
-                winend1.SetActive(false);
+                winendtitle.text = "You have passed";
+                winmessage.text = "Allies you saved: " + infectionrecord.uninfectedallies;
             }
             else
             {
-                winend1.SetActive(true);
-                winend.SetActive(false); 
+                winendtitle.text = "You have failed";
+                winmessage.text = "Allies you saved: " + infectionrecord.uninfectedallies;
             }
         }
     }

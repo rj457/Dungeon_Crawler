@@ -1,6 +1,6 @@
 sceneSetups:
 - path: Assets/Scenes/Dugeon_Crawler.unity
-  isLoaded: 0
+  isLoaded: 1
   isActive: 0
   isSubScene: 0
 - path: Assets/Scenes/PokemonBattle.unity
@@ -8,10 +8,10 @@ sceneSetups:
   isActive: 0
   isSubScene: 0
 - path: Assets/Scenes/SpaceInvade.unity
-  isLoaded: 1
-  isActive: 1
-  isSubScene: 0
-- path: Assets/Scenes/StartMenu.unity
   isLoaded: 0
   isActive: 0
+  isSubScene: 0
+- path: Assets/Scenes/StartMenu.unity
+  isLoaded: 1
+  isActive: 1
   isSubScene: 0

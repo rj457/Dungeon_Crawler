@@ -99,7 +99,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -143,4 +143,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7f01c86c543f914b8bb9c95ada943ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifetime: 3
+  lifetime: 5
+  targetlists:
+  - {fileID: 8756022688364551809, guid: 4d39724da2401bf4e9e8599b5c32ad16, type: 3}
+  - {fileID: 8791876116621778090, guid: e2d25d003571e3d4bae472d3b69f1221, type: 3}
+  - {fileID: 8868482988676451735, guid: 5d2c2e40007345244a5a478c9a07ba7b, type: 3}
+  - {fileID: 7072435195573733661, guid: 69167db3c38acb64fb4668feeb3ebdca, type: 3}
+  - {fileID: 245127150639177208, guid: 57f7bc1d1472f67468f2f7d1efcbfe1e, type: 3}
+  - {fileID: 5483104482895134611, guid: 8424900e064519b4fa65ae2ff44dd19f, type: 3}
+  - {fileID: 5382195304524244405, guid: 0f2b5014d0514444897f4680b5b79de9, type: 3}
+  - {fileID: 3366264503549051700, guid: aa036d9760f176146b6458685d7b2b4f, type: 3}
+  speed: 5

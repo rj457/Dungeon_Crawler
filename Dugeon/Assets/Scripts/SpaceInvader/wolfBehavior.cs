@@ -15,7 +15,7 @@ public class wolfBehavior : MonoBehaviour
     public SpriteRenderer SR;
     public bool IsInfected;
     //attack pattern
-    //public GameObject virus;
+    public GameObject virus;
     //public int virusCount;
     //public float startWait;
     public float spawnWait;
@@ -70,6 +70,9 @@ public class wolfBehavior : MonoBehaviour
                 Instantiate(virusprefablist[i], spawnPosition, Quaternion.identity);
 
             }
+            //randomspot = Random.Range(0, sqawnspot.Length);
+            //spawnPosition = sqawnspot[randomspot].position;
+            //Instantiate(virus, spawnPosition, Quaternion.identity);
             waveWait = spawnWait;
         }
     }

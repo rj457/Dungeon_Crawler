@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -17,19 +18,23 @@ public class battlesystem : MonoBehaviour
     public Animator transition;
     public countDownTimer timer;
     public GameObject timertext; 
-    public List<bool> sheeplist;
+    //public List<bool> sheeplist;
     public GameObject[] sheeps = null;
-    private bool Isend = false; 
+    private bool Isend = false;
+    private int infectionnumber;
+    
     // Start is called before the first frame update
     void Start()
     {
         checkstartcondition();
         sqawnsheep();
         sqawnwolf();
+        sheeps = GameObject.FindGameObjectsWithTag("Allies");
+       
     }
     void checkstartcondition()
     {
-        if (infectionrecord.uninfectedallies == 0 && infectionrecord.infectedallies == 0)
+        if (infectionrecord.infectedallies == 0)
         {
             StartCoroutine(exitearly()); 
         }
@@ -51,24 +56,36 @@ public class battlesystem : MonoBehaviour
         while (infectionrecord.uninfectedallies != 0)
         {
             Vector3 spawnPosition = new Vector3(Random.Range(-11f, 11f), -5.5f, 10f);
-            Instantiate(sheepPrefab, spawnPosition, Quaternion.identity);
+            Instantiate(sheepPrefab, spawnPosition, Quaternion.Euler(new Vector3(0f,0f,180f)));
             infectionrecord.uninfectedallies -= 1; 
         }
     }
 
     // Update is called once per frame
     void Update()
-    { 
-        if ((heartcount.listgameobjects.Count == 0 || timer.currentTime == 0) && Isend == false)
+    {
+        checkhealth(); 
+        if ((heartcount.listgameobjects.Count == 0 || timer.currentTime == 0 || (infectionnumber == 0)) && Isend == false)
         {
             StartCoroutine(exitencounter());
             Isend = true; 
         }
        
     }
+    void checkhealth()
+    {
+        infectionnumber = 0; 
+        foreach (GameObject sheep in sheeps)
+        {
+            if (sheep.GetComponent<wolfBehavior>().IsInfected)
+            {
+                infectionnumber += 1; 
+            }
+        }
+        
+    }
     void updateinfectionrecord()
     {
-        sheeps = GameObject.FindGameObjectsWithTag("Allies");
         foreach (GameObject sheep in sheeps)
         {
             if (sheep.GetComponent<wolfBehavior>().IsInfected)
@@ -93,7 +110,7 @@ public class battlesystem : MonoBehaviour
     IEnumerator exitearly()
     {
         timertext.SetActive(true);
-        yield return new WaitForSeconds(100f);
+        yield return new WaitForSeconds(3f);
         SceneManager.LoadScene(1);
     }
     IEnumerator exitencounter()

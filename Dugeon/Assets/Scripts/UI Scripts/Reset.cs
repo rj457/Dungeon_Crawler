@@ -12,7 +12,7 @@ public class Reset : MonoBehaviour
     public GameObject allies;
     public GameObject allies1;
     public GameObject winend;
-    public GameObject winend1;
+    
     public InventoryObject infectionrecord;
     //enemy object 
     public List<GameObject> enemylists;
@@ -24,7 +24,7 @@ public class Reset : MonoBehaviour
         recordplayer.playerhealth = 100;
         recordplayer.IsFollow = false;
         winend.SetActive(false);
-        winend1.SetActive(false);
+       
         resetallies();
         restartenemy();
         clearenemyencounterlist(); 

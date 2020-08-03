@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1301133532372683404}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.51, y: -4.27, z: 0}
+  m_LocalPosition: {x: -2.9, y: -1.72, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4528155250447025407}
@@ -54,7 +54,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2400158200446237881}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.9, y: -4.3, z: 0}
+  m_LocalPosition: {x: 2.9, y: -1.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4528155250447025407}
@@ -386,6 +386,7 @@ MonoBehaviour:
   goesright: 0
   SR: {fileID: 1466942371879703922, guid: 7a51e48b335e05d43af0f873f886d8b9, type: 3}
   IsInfected: 1
+  virus: {fileID: 7666174578619989743, guid: 7a51e48b335e05d43af0f873f886d8b9, type: 3}
   spawnWait: 2
   waveWait: 2
   sqawnspot:
@@ -393,9 +394,9 @@ MonoBehaviour:
   - {fileID: 223776679707077141}
   - {fileID: 8469877150199506050}
   virusprefablist:
-  - {fileID: 8968067902257711117, guid: 4ffcca16d24fcab4b9bafadebadbd9d5, type: 3}
-  - {fileID: 7928644051745735630, guid: ec7cef4eaea03f344969cc672848add6, type: 3}
-  - {fileID: 6603137911502266071, guid: 22fd2305a36cb1440a7206f8f0bbb92a, type: 3}
+  - {fileID: 7666174578619989743, guid: 7a51e48b335e05d43af0f873f886d8b9, type: 3}
+  - {fileID: 7666174578619989743, guid: 7a51e48b335e05d43af0f873f886d8b9, type: 3}
+  - {fileID: 7666174578619989743, guid: 7a51e48b335e05d43af0f873f886d8b9, type: 3}
   UItimer: {fileID: 1262109829741795222}
 --- !u!1 &5098518656370065033
 GameObject:
@@ -520,7 +521,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5707765348854273303}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.36, y: -4.3, z: 0}
+  m_LocalPosition: {x: -0.2, y: -1.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4528155250447025407}
