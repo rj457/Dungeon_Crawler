@@ -21,6 +21,8 @@ TagManager:
   - Virus
   - Healbar
   - Mask
+  - itemslot
+  - Rock
   layers:
   - Default
   - TransparentFX

@@ -9,7 +9,8 @@ public class InventoryController : MonoBehaviour
     public TextMeshProUGUI timer;
     public float startTime;
     public float currentTime;
-    public GameObject lossalliessign; 
+    public GameObject lossalliessign;
+    public TextMeshProUGUI rockcounts; 
     //// Start is called before the first frame update
     void Start()
     {
@@ -20,7 +21,16 @@ public class InventoryController : MonoBehaviour
     void Update()
     {
         //constantly check infection balance
-        checkinfectionbalance(); 
+        checkinfectionbalance();
+        updateinventory(); 
+    }
+    void updateinventory()
+    {
+        rockcounts.text = infectionrecord.rockcounts.ToString("0");
+        if (infectionrecord.rockcounts == 0)
+        {
+            Destroy(GameObject.Find("RockSprite(Clone)")); 
+        }
     }
     void checkinfectionbalance()
     {

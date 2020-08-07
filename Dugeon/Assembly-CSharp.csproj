@@ -70,6 +70,9 @@
     <Compile Include="Assets\Health Bar\Assets\Scripts\Rotator.cs" />
     <Compile Include="Assets\Health Bar\Assets\Scripts\SimpleCameraController.cs" />
     <Compile Include="Assets\Health Bar\Assets\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\Prefab\supplyprefab\cursorMask.cs" />
+    <Compile Include="Assets\Prefab\supplyprefab\cursorStain.cs" />
+    <Compile Include="Assets\Prefab\supplyprefab\cursorWall.cs" />
     <Compile Include="Assets\Scripts\AlliesScript\AlliesCollision.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\EnemyBehavior\AIPathUpdate.cs" />
@@ -97,7 +100,9 @@
     <Compile Include="Assets\Scripts\SpaceInvader\virusbulletmover\movermiddle.cs" />
     <Compile Include="Assets\Scripts\SpaceInvader\wolfBehavior.cs" />
     <Compile Include="Assets\Scripts\UI Scripts\AlliesSqawn.cs" />
+    <Compile Include="Assets\Scripts\UI Scripts\CursorRock.cs" />
     <Compile Include="Assets\Scripts\UI Scripts\DoorCollision.cs" />
+    <Compile Include="Assets\Scripts\UI Scripts\DragandDrop.cs" />
     <Compile Include="Assets\Scripts\UI Scripts\HealthBar.cs" />
     <Compile Include="Assets\Scripts\UI Scripts\HeloCollision.cs" />
     <Compile Include="Assets\Scripts\UI Scripts\InventoryController.cs" />
@@ -107,6 +112,8 @@
     <Compile Include="Assets\Scripts\UI Scripts\ShieldFollow.cs" />
     <Compile Include="Assets\Scripts\UI Scripts\UItimer.cs" />
     <Compile Include="Assets\Scripts\UI Scripts\cavemandilog.cs" />
+    <Compile Include="Assets\Scripts\UI Scripts\cursorBarrel.cs" />
+    <Compile Include="Assets\Scripts\UI Scripts\inventorybuttons.cs" />
     <Compile Include="Assets\Scripts\UI Scripts\lightdirection.cs" />
     <Compile Include="Assets\Scripts\levelloaderscript\LevelLoder.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />

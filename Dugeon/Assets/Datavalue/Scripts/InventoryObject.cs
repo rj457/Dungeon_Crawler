@@ -18,4 +18,9 @@ public class InventoryObject : ScriptableObject
 
     public Vector3 alliesinitialvalue = new Vector3(-10.51F, -4.37F, -1F);
     public Vector3 allies1initialvalue = new Vector3(10.47F, 3.59F, -1F);
+    //inventory counts
+    public int rockcounts;
+    public int maskcounts;
+    public int stainerizercounts;
+    public int wallcounts; 
 }

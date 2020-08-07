@@ -23,3 +23,7 @@ MonoBehaviour:
   allies1: {x: 0, y: 0, z: 0}
   alliesinitialvalue: {x: -10.51, y: -4.37, z: -1}
   allies1initialvalue: {x: 10.47, y: 3.59, z: -1}
+  rockcounts: 5
+  maskcounts: 0
+  stainerizercounts: 0
+  wallcounts: 0
