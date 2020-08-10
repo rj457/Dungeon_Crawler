@@ -16,7 +16,6 @@ public class Playermove : MonoBehaviour
     private void Start()
     {
         Rigidbody2D = GetComponent<Rigidbody2D>();
-        //RectTransform = GetComponent<RectTransform>(); 
     }
 
     void FixedUpdate()
@@ -26,17 +25,13 @@ public class Playermove : MonoBehaviour
 
         Vector3 movement = new Vector3(moveHorizontal,moveVertical, 0.0f);
         Rigidbody2D.velocity = movement * speed;
-
-        //Rigidbody2D.position = new Vector3
-        //(
-        //    Mathf.Clamp(Rigidbody2D.position.x, boundary.xMin, boundary.xMax),
-        //    Mathf.Clamp(Rigidbody2D.position.y, boundary.yMin, boundary.yMax),
-        //    0.0f
-        //);
-        //Vector3 pos = RectTransform.position;
-        //pos.x = Mathf.Clamp(pos.x,boundary.xMin,boundary.xMax);
-        //pos.y = Mathf.Clamp(pos.y, boundary.yMin, boundary.yMax);
-        //RectTransform.position = pos; 
+        mouseface();
+    }
+    void mouseface()
+    {
+        Vector3 MousPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 direction = new Vector2(MousPosition.x - transform.position.x, MousPosition.y - transform.position.y);
+        transform.up = direction;
     }
 }
 

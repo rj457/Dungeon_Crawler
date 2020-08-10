@@ -22,11 +22,15 @@ public class battlesystem : MonoBehaviour
     public GameObject[] sheeps = null;
     private bool Isend = false;
     private int infectionnumber;
+    //update shoot inventory 
+    public TextMeshProUGUI maskCount;
+    public TextMeshProUGUI stainerizerCount;
+    public TextMeshProUGUI wallCount; 
     
     // Start is called before the first frame update
     void Start()
     {
-        checkstartcondition();
+        //checkstartcondition();
         sqawnsheep();
         sqawnwolf();
         sheeps = GameObject.FindGameObjectsWithTag("Allies");
@@ -64,13 +68,20 @@ public class battlesystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        checkhealth(); 
-        if ((heartcount.listgameobjects.Count == 0 || timer.currentTime == 0 || (infectionnumber == 0)) && Isend == false)
+        checkhealth();
+        updateInventory(); 
+        if ((heartcount.listgameobjects.Count == 0 || timer.currentTime == 0) && Isend == false)
         {
             StartCoroutine(exitencounter());
             Isend = true; 
         }
        
+    }
+    void updateInventory()
+    {
+        maskCount.text = infectionrecord.maskcounts.ToString("0");
+        stainerizerCount.text = infectionrecord.stainerizercounts.ToString("0");
+        wallCount.text = infectionrecord.wallcounts.ToString("0");
     }
     void checkhealth()
     {
@@ -97,14 +108,6 @@ public class battlesystem : MonoBehaviour
                 infectionrecord.uninfectedallies += 1; 
             }
         }
-        //sheeplist = new List<bool> { sheep.GetComponent<sheepbehavior>().IsInfected, sheep1.GetComponent<sheepbehavior>().IsInfected, sheep2.GetComponent<sheepbehavior>().IsInfected };
-        //for (int i = 0; i < sheeplist.Count; i++)
-        //{
-        //    if (sheeplist[i] == true)
-        //    {
-        //        infectcount += 1;
-        //    }
-        //}
     }
 
     IEnumerator exitearly()

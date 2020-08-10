@@ -9,7 +9,8 @@ public class DragandDrop : MonoBehaviour
     private GameObject defaultcursor;
     private GameObject axecursor;
     private GameObject aimcursor;
-    private GameObject chestcursor; 
+    private GameObject chestcursor;
+    private GameObject chatcursor; 
     public List<GameObject> cursortypes; 
 
     private bool isenterrock;
@@ -23,6 +24,7 @@ public class DragandDrop : MonoBehaviour
         axecursor = cursortypes[1];
         aimcursor = cursortypes[2];
         chestcursor = cursortypes[3];
+        chatcursor = cursortypes[4]; 
     }
 
     void Update()
@@ -42,6 +44,7 @@ public class DragandDrop : MonoBehaviour
         defaultcursor.SetActive(true);
         aimcursor.SetActive(false);
         chestcursor.SetActive(false);
+        chatcursor.SetActive(false);
     }
     public void enableaxe()
     {
@@ -49,6 +52,7 @@ public class DragandDrop : MonoBehaviour
         defaultcursor.SetActive(false);
         aimcursor.SetActive(false);
         chestcursor.SetActive(false);
+        chatcursor.SetActive(false);
     }
     public void enableaim()
     {
@@ -56,6 +60,7 @@ public class DragandDrop : MonoBehaviour
         defaultcursor.SetActive(false);
         aimcursor.SetActive(true);
         chestcursor.SetActive(false);
+        chatcursor.SetActive(false);
     }
     public void enablechest()
     {
@@ -63,6 +68,14 @@ public class DragandDrop : MonoBehaviour
         axecursor.SetActive(false);
         defaultcursor.SetActive(false);
         aimcursor.SetActive(false);
+        chatcursor.SetActive(false);
     }
-
+    public void enablechat()
+    {
+        chestcursor.SetActive(false);
+        axecursor.SetActive(false);
+        defaultcursor.SetActive(false);
+        aimcursor.SetActive(false);
+        chatcursor.SetActive(true);
+    }
 }

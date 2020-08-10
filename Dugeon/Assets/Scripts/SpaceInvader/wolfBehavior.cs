@@ -65,21 +65,13 @@ public class wolfBehavior : MonoBehaviour
         {
             for (int i = 0; i < sqawnspot.Count(); i++)
             {
-                //generatespot();
                 spawnPosition = sqawnspot[i].position;
                 Instantiate(virusprefablist[i], spawnPosition, Quaternion.identity);
 
             }
-            //randomspot = Random.Range(0, sqawnspot.Length);
-            //spawnPosition = sqawnspot[randomspot].position;
-            //Instantiate(virus, spawnPosition, Quaternion.identity);
             waveWait = spawnWait;
         }
     }
-    //void generatespot()
-    //{
-    //    randomspot = Random.Range(0, sqawnspot.Length); 
-    //}
 
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -87,12 +79,7 @@ public class wolfBehavior : MonoBehaviour
         {
             goesright *= changedirection; 
         }
-        if (collision.gameObject.tag == "Virus")
-        {
-            Destroy(collision.gameObject);
-            SR.color = Color.red;
-            IsInfected = true; 
-        }
+        
         if (collision.gameObject.tag == "Allies" && IsInfected)
         {
             SpriteRenderer alliessr = collision.gameObject.GetComponent<SpriteRenderer>();
@@ -118,6 +105,12 @@ public class wolfBehavior : MonoBehaviour
                 //enable the shield 
                 UItimer.enabled = true; 
             }
+        }
+        if (collider.gameObject.tag == "Virus")
+        {
+            Destroy(collider.gameObject);
+            SR.color = Color.red;
+            IsInfected = true;
         }
     }
     

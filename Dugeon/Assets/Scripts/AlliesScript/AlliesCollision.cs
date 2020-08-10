@@ -11,30 +11,31 @@ public class AlliesCollision : MonoBehaviour
     public TextMeshProUGUI textpro;
     string firstSentence = "Player:\n I am here to rescue you.";
     string secondSentence = "Player:\n Come to my universe and stay for now. It is safe.";
-    bool safenet = true; 
-    bool istouchPlayer = false;
+    bool alliesclicked = false;
+    bool safnet = true; 
+    
     public bool Isinfected;
     public InventoryObject infectionrecord;
+    public DragandDrop cursorcontroller; 
  
     void Update()
     {
 
-        if (istouchPlayer && Input.GetKeyDown(KeyCode.N) && safenet)
+        if (alliesclicked && safnet)
         {
             StartCoroutine(dialogStart());
+            updateinfection(); 
         }
         
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Player")
-        {
-            istouchPlayer = true;
-            //update infection to object 
-            updateinfection(); 
-        }
-    }
+    //void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    if (collision.gameObject.tag == "Player")
+    //    {
+            
+    //    }
+    //}
  
     void updateinfection()
     {
@@ -49,7 +50,7 @@ public class AlliesCollision : MonoBehaviour
     }
     IEnumerator dialogStart()
     {
-        safenet = false; 
+        safnet = false; 
         //open dialog
         rescueDialog.SetActive(true);
         textpro.text = firstSentence;
@@ -74,5 +75,22 @@ public class AlliesCollision : MonoBehaviour
         {
             infectionrecord.allies1isfollow = true; 
         }
+    }
+    public void OnMouseEnter()
+    {
+        cursorcontroller.enablechat();
+    }
+    public void OnMouseExit()
+    {
+        cursorcontroller.enablenormal();
+    }
+    public void OnMouseDown()
+    {
+        alliesclicked = true;
+    }
+
+    public void OnMouseUp()
+    {
+        cursorcontroller.enablenormal();
     }
 }
