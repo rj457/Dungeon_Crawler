@@ -1,17 +1,10 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-<<<<<<< HEAD
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{A9703DC2-5205-295D-AEA6-F4117EB47962}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AstarPathfindingProject", "AstarPathfindingProject.csproj", "{5792C124-91DD-5DD9-A175-460F02FB62FD}"
 EndProject
-=======
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AstarPathfindingProject", "AstarPathfindingProject.csproj", "{5792C124-91DD-5DD9-A175-460F02FB62FD}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{A9703DC2-5205-295D-AEA6-F4117EB47962}"
-EndProject
->>>>>>> ded83f82d1c4f89f0327fff8258c8fbeae884f51
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AstarPathfindingProjectEditor", "AstarPathfindingProjectEditor.csproj", "{EDE75250-2FBE-0C81-A199-5B39D0183E32}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PackageToolsEditor", "PackageToolsEditor.csproj", "{A19DD79B-D143-E975-70BE-D7F8C5607033}"
@@ -24,24 +17,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-<<<<<<< HEAD
 		{A9703DC2-5205-295D-AEA6-F4117EB47962}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A9703DC2-5205-295D-AEA6-F4117EB47962}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9703DC2-5205-295D-AEA6-F4117EB47962}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9703DC2-5205-295D-AEA6-F4117EB47962}.Release|Any CPU.Build.0 = Release|Any CPU
-=======
->>>>>>> ded83f82d1c4f89f0327fff8258c8fbeae884f51
 		{5792C124-91DD-5DD9-A175-460F02FB62FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5792C124-91DD-5DD9-A175-460F02FB62FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5792C124-91DD-5DD9-A175-460F02FB62FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5792C124-91DD-5DD9-A175-460F02FB62FD}.Release|Any CPU.Build.0 = Release|Any CPU
-<<<<<<< HEAD
-=======
-		{A9703DC2-5205-295D-AEA6-F4117EB47962}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A9703DC2-5205-295D-AEA6-F4117EB47962}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A9703DC2-5205-295D-AEA6-F4117EB47962}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A9703DC2-5205-295D-AEA6-F4117EB47962}.Release|Any CPU.Build.0 = Release|Any CPU
->>>>>>> ded83f82d1c4f89f0327fff8258c8fbeae884f51
 		{EDE75250-2FBE-0C81-A199-5B39D0183E32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{EDE75250-2FBE-0C81-A199-5B39D0183E32}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EDE75250-2FBE-0C81-A199-5B39D0183E32}.Release|Any CPU.ActiveCfg = Release|Any CPU
