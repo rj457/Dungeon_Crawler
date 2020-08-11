@@ -12,8 +12,6 @@ GameObject:
   - component: {fileID: 6237071261284043637}
   - component: {fileID: 7344529332171405585}
   - component: {fileID: 3026423478597081992}
-  - component: {fileID: 8169312203419551487}
-  - component: {fileID: 1004071831293471380}
   m_Layer: 0
   m_Name: RightCast
   m_TagString: Healbar
@@ -133,30 +131,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &8169312203419551487
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6349372390763623371}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 178eab2b870310340a735535a8e8a30a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Speed: 5
-  RD: {fileID: 3026423478597081992}
-  lifetime: 4
---- !u!114 &1004071831293471380
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6349372390763623371}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f22ebf1b2eaa554f98bb9c9d88a4d6c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

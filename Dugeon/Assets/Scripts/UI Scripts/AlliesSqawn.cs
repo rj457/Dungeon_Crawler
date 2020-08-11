@@ -8,7 +8,8 @@ public class AlliesSqawn : MonoBehaviour
     public InventoryObject infectionrecord;
     public GameObject allies;
     public GameObject allies1;
-    public InventoryObject encountername; 
+    public InventoryObject encountername;
+    private GameObject enemy; 
     // Start is called before the first frame update
     void Start()
     {
@@ -42,8 +43,11 @@ public class AlliesSqawn : MonoBehaviour
         {
             foreach (string tag in encountername.enemyTag)
             {
-                GameObject enemy = GameObject.FindGameObjectWithTag(tag);
-                enemy.SetActive(false); 
+                enemy = GameObject.FindGameObjectWithTag(tag);
+                if (enemy != null)
+                {
+                    enemy.SetActive(false);
+                }
             }
         }
         else if (encountername.enemyTag == null)

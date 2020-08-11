@@ -10,7 +10,12 @@ public class InventoryController : MonoBehaviour
     public float startTime;
     public float currentTime;
     public GameObject lossalliessign;
-    public TextMeshProUGUI rockcounts; 
+    public TextMeshProUGUI rockcounts;
+    //other three resources counts; 
+    public TextMeshProUGUI maskcounts;
+    public TextMeshProUGUI stainerizercounts;
+    public TextMeshProUGUI wallcounts;
+
     //// Start is called before the first frame update
     void Start()
     {
@@ -27,6 +32,9 @@ public class InventoryController : MonoBehaviour
     void updateinventory()
     {
         rockcounts.text = infectionrecord.rockcounts.ToString("0");
+        maskcounts.text = infectionrecord.maskcounts.ToString("0");
+        stainerizercounts.text = infectionrecord.stainerizercounts.ToString("0");
+        wallcounts.text = infectionrecord.wallcounts.ToString("0");
         if (infectionrecord.rockcounts == 0)
         {
             Destroy(GameObject.Find("RockSprite(Clone)")); 

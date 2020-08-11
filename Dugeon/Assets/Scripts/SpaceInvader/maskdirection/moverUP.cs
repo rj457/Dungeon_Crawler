@@ -5,7 +5,6 @@ using UnityEngine;
 public class moverUP : MonoBehaviour
 {
     public float lifetime;
-    private Vector3 movement;
     public Rigidbody2D RD;
     public float speed;
     private Vector3 movementVector = Vector3.zero;
@@ -23,8 +22,6 @@ public class moverUP : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //movement = new Vector3(0f, 1f, 0f);
-        //RD.velocity = speed * movement; 
         transform.position += movementVector * Time.deltaTime;
         transform.up = Direction; 
     }

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8148927206043543918}
   - component: {fileID: 5326986756419175584}
   - component: {fileID: 8985274936710101907}
+  - component: {fileID: -1314426161161354482}
   m_Layer: 0
   m_Name: downWall
   m_TagString: Wall
@@ -95,7 +96,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -144,6 +145,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6216a793f339e05428eff9c6e02aebcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 5
+  Speed: 50
   RD: {fileID: 5326986756419175584}
-  lifetime: 5
+  lifetime: 10
+--- !u!114 &-1314426161161354482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6816610621280951383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f22ebf1b2eaa554f98bb9c9d88a4d6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Wall: {fileID: 8189303180737004615, guid: c63bda8dc111e1048ab7c937494a3ee8, type: 3}

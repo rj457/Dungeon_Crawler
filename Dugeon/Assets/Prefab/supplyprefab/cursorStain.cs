@@ -26,7 +26,7 @@ public class cursorStain : MonoBehaviour
             {
                 Destroy(gameObject);
                 cursorcontroller.enablenormal();
-                inventory.stainerizercounts += 1;
+                inventory.stainerizercounts += 10;
                 isstainclicked = false;
             }
         }

@@ -23,6 +23,7 @@ TagManager:
   - Mask
   - itemslot
   - Rock
+  - Walltrigger
   layers:
   - Default
   - TransparentFX

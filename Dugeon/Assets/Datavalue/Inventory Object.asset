@@ -14,16 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uninfectedallies: 0
   infectedallies: 0
-  alliesisfollow: 1
+  alliesisfollow: 0
   allies1isfollow: 0
   enemyTag: []
-  initialvalue: {x: 5.7170286, y: 15.94959, z: 0}
+  initialvalue: {x: -1.27, y: -1.88, z: 0}
   Isbattle: 0
   allies: {x: 0, y: 0, z: 0}
   allies1: {x: 0, y: 0, z: 0}
   alliesinitialvalue: {x: -10.51, y: -4.37, z: -1}
   allies1initialvalue: {x: 10.47, y: 3.59, z: -1}
-  rockcounts: 6
-  maskcounts: 3
-  stainerizercounts: 3
-  wallcounts: 3
+  rockcounts: 0
+  maskcounts: 89
+  stainerizercounts: 90
+  wallcounts: 90

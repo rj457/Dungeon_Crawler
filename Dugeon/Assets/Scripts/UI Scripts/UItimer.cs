@@ -7,14 +7,15 @@ public class UItimer : MonoBehaviour
 {
     public GameObject infectedsheep;
     public float waittime;
+    private float resettime; 
     public GameObject heloprefab;
     private bool ismaskon = false;
-    GameObject heloclone; 
-    // Start is called before the first frame update
-    //void Start()
-    //{
-        
-    //}
+    GameObject heloclone;
+
+    void Start()
+    {
+        resettime = waittime; 
+    }
 
     // Update is called once per frame
     void Update()
@@ -26,7 +27,7 @@ public class UItimer : MonoBehaviour
                 heloclone = Instantiate(heloprefab, infectedsheep.transform.position, Quaternion.identity);
                 ismaskon = true; 
             }
-            starttimer(); 
+            starttimer();
         }
         else if (infectedsheep.GetComponent<SpriteRenderer>().color == Color.red)
         {
@@ -40,11 +41,13 @@ public class UItimer : MonoBehaviour
         gameObject.GetComponent<TextMeshProUGUI>().text = waittime.ToString("0");
         if (waittime <= 0)
         {
-            infectedsheep.GetComponent<SpriteRenderer>().color = Color.white;
-            infectedsheep.GetComponent<wolfBehavior>().IsInfected = false;
+            //infectedsheep.GetComponent<SpriteRenderer>().color = Color.white;
+            //infectedsheep.GetComponent<wolfBehavior>().IsInfected = false;
             Destroy(heloclone);
             ismaskon = false; 
             gameObject.GetComponent<TextMeshProUGUI>().enabled = false;
+            infectedsheep.GetComponent<SpriteRenderer>().color = Color.red;
+            waittime = resettime; 
         }
     }
 }

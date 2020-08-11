@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement; 
 
 public class Reset : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class Reset : MonoBehaviour
     public GameObject allies;
     public GameObject allies1;
     public GameObject winend;
-    
+    public GameObject Player; 
     public InventoryObject infectionrecord;
     //enemy object 
     public List<GameObject> enemylists;
@@ -27,12 +28,19 @@ public class Reset : MonoBehaviour
        
         resetallies();
         restartenemy();
-        clearenemyencounterlist(); 
+        clearenemyencounterlist();
+        resetInventory();
+        resetPlayerPosition();
+        SceneManager.LoadScene(1);
     }
   
     public void OnQuitButton()
     {
         Application.Quit(); 
+    }
+    public void OnCloseButton()
+    {
+        winend.SetActive(false);
     }
     void resetallies()
     {
@@ -56,5 +64,17 @@ public class Reset : MonoBehaviour
     void clearenemyencounterlist()
     {
         infectionrecord.enemyTag.Clear(); 
+    }
+    void resetInventory()
+    {
+        infectionrecord.rockcounts = 0;
+        infectionrecord.maskcounts = 0;
+        infectionrecord.stainerizercounts = 0;
+        infectionrecord.wallcounts = 0;
+    }
+    void resetPlayerPosition()
+    {
+        Player.transform.position = new Vector3(-1.27f, -1.88f, 0f);
+        infectionrecord.initialvalue = new Vector3(-1.27f, -1.88f, 0f);
     }
 }

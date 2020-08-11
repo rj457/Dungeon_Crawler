@@ -4,15 +4,25 @@ using UnityEngine;
 
 public class WallCollsion : MonoBehaviour
 {
-    private void OnCollisionEnter2D(Collision2D collision)
+    public GameObject Wall;
+    private GameObject player;
+    private Vector3 spawnposition;
+
+    void Start()
     {
-        if (collision.gameObject.tag == "Wall")
+        player = GameObject.Find("Player");
+        spawnposition = player.GetComponent<shootTowards>().clickedposition;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Walltrigger")
         {
+            Instantiate(Wall, spawnposition, Quaternion.identity);
             Destroy(gameObject);
         }
         if (collision.gameObject.tag == "Virus")
         {
-            Destroy(gameObject);
             Destroy(collision.gameObject);
         }
     }

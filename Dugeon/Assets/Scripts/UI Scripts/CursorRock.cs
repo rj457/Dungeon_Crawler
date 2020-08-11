@@ -1,8 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
-using UnityScript.Steps;
 
 public class CursorRock : MonoBehaviour
 {
@@ -21,7 +18,7 @@ public class CursorRock : MonoBehaviour
             {
                 Destroy(gameObject);
                 cursorcontroller.enablenormal();
-                inventory.rockcounts += 1;
+                inventory.rockcounts += 10;
                 isrockclicked = false;
             }
         }

@@ -22,10 +22,9 @@ public class wolfBehavior : MonoBehaviour
     public float waveWait;
     //sqawn at random spots 
     public Transform[] sqawnspot;
-    private int randomspot;
     Vector3 spawnPosition;
     public GameObject[] virusprefablist;
-    
+    private int treatmentcounts = 0; 
     public TextMeshProUGUI UItimer; 
 
     // Start is called before the first frame update
@@ -57,6 +56,13 @@ public class wolfBehavior : MonoBehaviour
         {
             speed = 3f; 
         }
+        if (treatmentcounts == 3)
+        {
+            SR.color = Color.white;
+            IsInfected = false;
+            speed = 3f;
+            treatmentcounts = 0; 
+        }
     }
     void StartAttackpattern()
     {
@@ -84,14 +90,10 @@ public class wolfBehavior : MonoBehaviour
         {
             SpriteRenderer alliessr = collision.gameObject.GetComponent<SpriteRenderer>();
             alliessr.color = Color.red;
-            collision.gameObject.GetComponent<wolfBehavior>().IsInfected = true; 
+            collision.gameObject.GetComponent<wolfBehavior>().IsInfected = true;
+            treatmentcounts = 0; 
         }
-        if (collision.gameObject.tag == "Potion")
-        {
-            Destroy(collision.gameObject);
-            SR.color = Color.white;
-            IsInfected = false; 
-        }
+        
     }
     void OnTriggerEnter2D(Collider2D collider)
     {
@@ -111,6 +113,14 @@ public class wolfBehavior : MonoBehaviour
             Destroy(collider.gameObject);
             SR.color = Color.red;
             IsInfected = true;
+            treatmentcounts = 0;
+        }
+        if (collider.gameObject.tag == "Potion")
+        {
+            Destroy(collider.gameObject);
+            treatmentcounts += 1;
+            //red become dimmer
+            SR.color = new Color(255f/255f,SR.color.g + 83.3f/250f, SR.color.b + 83.3f / 250f);
         }
     }
     
