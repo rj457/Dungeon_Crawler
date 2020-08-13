@@ -398,6 +398,10 @@ MonoBehaviour:
   - {fileID: 7666174578619989743, guid: 7a51e48b335e05d43af0f873f886d8b9, type: 3}
   - {fileID: 7666174578619989743, guid: 7a51e48b335e05d43af0f873f886d8b9, type: 3}
   UItimer: {fileID: 1262109829741795222}
+  Isselfmasked: 0
+  inventory: {fileID: 11400000, guid: ce868272b5cc87d4eab3ef62c941b487, type: 2}
+  WarningSign: {fileID: 3754241039182128806, guid: 34d93ff697fe98444b460e3f4586cea7,
+    type: 3}
 --- !u!1 &5098518656370065033
 GameObject:
   m_ObjectHideFlags: 0

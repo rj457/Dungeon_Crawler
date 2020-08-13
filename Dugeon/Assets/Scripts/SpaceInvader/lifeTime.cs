@@ -7,17 +7,16 @@ public class lifeTime : MonoBehaviour
 {
     public int LifeTime;
     public SpriteRenderer SR;
-    private int destorycounts; 
+    public Animator animator; 
     // Start is called before the first frame update
     void Start()
     {
         Destroy(gameObject, LifeTime);
-        destorycounts = 0;
     }
 
     void Update()
     {
-        if (destorycounts == 10)
+        if (SR.color == Color.red)
         {
             Destroy(gameObject);
         }
@@ -29,6 +28,10 @@ public class lifeTime : MonoBehaviour
         {
             Destroy(collider.gameObject); 
         }
+        if (collider.gameObject.tag == "Potion")
+        {
+            SR.color = new Color(SR.color.r, SR.color.g + 25.5f / 255f, SR.color.b + 25.5f / 255f);
+        }
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -37,7 +40,6 @@ public class lifeTime : MonoBehaviour
             if (collision.gameObject.GetComponent<wolfBehavior>().IsInfected)
             {
                 SR.color = new Color(SR.color.r, SR.color.g - 25.5f/255f, SR.color.b - 25.5f / 255f);
-                destorycounts += 1; 
             }
         }
     }

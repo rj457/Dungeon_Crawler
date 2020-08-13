@@ -16,8 +16,6 @@ public class wolfBehavior : MonoBehaviour
     public bool IsInfected;
     //attack pattern
     public GameObject virus;
-    //public int virusCount;
-    //public float startWait;
     public float spawnWait;
     public float waveWait;
     //sqawn at random spots 
@@ -25,7 +23,11 @@ public class wolfBehavior : MonoBehaviour
     Vector3 spawnPosition;
     public GameObject[] virusprefablist;
     private int treatmentcounts = 0; 
-    public TextMeshProUGUI UItimer; 
+    public TextMeshProUGUI UItimer;
+    public bool Isselfmasked;
+    private int randomness;
+    public InventoryObject inventory;
+    public GameObject WarningSign; 
 
     // Start is called before the first frame update
     void Start()
@@ -33,7 +35,12 @@ public class wolfBehavior : MonoBehaviour
         Rigidbody2D = GetComponent<Rigidbody2D>();
         SR = GetComponent<SpriteRenderer>(); 
         goesright = Random.Range(0,2)*2-1;
-     
+        //pick random number 
+        randomness = Random.Range(0,9);
+        if (randomness <= 9-(2*inventory.enemyTag.Count-2) && IsInfected == false)
+        {
+            StartCoroutine(mutationStart()); 
+        }
     }
 
     // Update is called once per frame
@@ -85,43 +92,51 @@ public class wolfBehavior : MonoBehaviour
         {
             goesright *= changedirection; 
         }
-        
-        if (collision.gameObject.tag == "Allies" && IsInfected)
+
+        if (collision.gameObject.tag == "Allies" && IsInfected && collision.gameObject.GetComponent<wolfBehavior>().Isselfmasked == false)
         {
             SpriteRenderer alliessr = collision.gameObject.GetComponent<SpriteRenderer>();
             alliessr.color = Color.red;
             collision.gameObject.GetComponent<wolfBehavior>().IsInfected = true;
-            treatmentcounts = 0; 
         }
-        
+
     }
     void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.gameObject.tag == "Mask")
         {
             Destroy(collider.gameObject);
-            if (SR.color == Color.red)
-            {
-                SR.color = Color.cyan;
-                speed = 0f;
-                //enable the shield 
-                UItimer.enabled = true; 
-            }
+            SR.color = Color.cyan;
+            IsInfected = false; 
+            UItimer.enabled = true; 
         }
         if (collider.gameObject.tag == "Virus")
         {
             Destroy(collider.gameObject);
             SR.color = Color.red;
             IsInfected = true;
-            treatmentcounts = 0;
+            //treatmentcounts = 0;
         }
-        if (collider.gameObject.tag == "Potion")
-        {
-            Destroy(collider.gameObject);
-            treatmentcounts += 1;
-            //red become dimmer
-            SR.color = new Color(255f/255f,SR.color.g + 83.3f/250f, SR.color.b + 83.3f / 250f);
-        }
+        //if (collider.gameObject.tag == "Potion")
+        //{
+        //    Destroy(collider.gameObject);
+        //    treatmentcounts += 1;
+        //    //red become dimmer
+        //    SR.color = new Color(255f/255f,SR.color.g + 83.3f/250f, SR.color.b + 83.3f / 250f);
+        //}
     }
     
+    IEnumerator mutationStart()
+    {
+        yield return new WaitForSeconds(10f);
+        //show sign
+        GameObject tempsign = Instantiate(WarningSign, new Vector3(transform.position.x, transform.position.y + 1, transform.position.z), Quaternion.identity);
+        //stop speed
+        tempsign.transform.parent = gameObject.transform; 
+        //turn color and infected state 
+        yield return new WaitForSeconds(2f);
+        Destroy(tempsign);
+        SR.color = Color.red;
+        IsInfected = true; 
+    }
 }

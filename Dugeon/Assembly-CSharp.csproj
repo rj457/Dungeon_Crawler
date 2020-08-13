@@ -81,7 +81,7 @@
     <Compile Include="Assets\Scripts\Player Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\Playermovement.cs" />
     <Compile Include="Assets\Scripts\SpaceInvader\DestorybyLifeTime.cs" />
-    <Compile Include="Assets\Scripts\SpaceInvader\DropController.cs" />
+    <Compile Include="Assets\Scripts\SpaceInvader\HeloCollision.cs" />
     <Compile Include="Assets\Scripts\SpaceInvader\MoverDown.cs" />
     <Compile Include="Assets\Scripts\SpaceInvader\PlayerSkill.cs" />
     <Compile Include="Assets\Scripts\SpaceInvader\Playermove.cs" />
@@ -104,7 +104,6 @@
     <Compile Include="Assets\Scripts\UI Scripts\DoorCollision.cs" />
     <Compile Include="Assets\Scripts\UI Scripts\DragandDrop.cs" />
     <Compile Include="Assets\Scripts\UI Scripts\HealthBar.cs" />
-    <Compile Include="Assets\Scripts\UI Scripts\HeloCollision.cs" />
     <Compile Include="Assets\Scripts\UI Scripts\InventoryController.cs" />
     <Compile Include="Assets\Scripts\UI Scripts\MenuController.cs" />
     <Compile Include="Assets\Scripts\UI Scripts\PickBarrel.cs" />

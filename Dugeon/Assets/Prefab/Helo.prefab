@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 205178193457644751}
   - component: {fileID: 2263770692002959184}
   - component: {fileID: 1734058442890104499}
+  - component: {fileID: 2355275832294942463}
+  - component: {fileID: 731071951440186085}
   m_Layer: 0
   m_Name: Helo
   m_TagString: Wall
@@ -109,3 +111,31 @@ EdgeCollider2D:
   - {x: -0.00778074, y: 0.144019}
   - {x: -0.09492872, y: 0.12365629}
   - {x: -0.15227132, y: -0.002648866}
+--- !u!58 &2355275832294942463
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8954195368616387755}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.16
+--- !u!114 &731071951440186085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8954195368616387755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa8a6e992eaa53c458850f3dc28f79da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
