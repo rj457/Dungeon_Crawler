@@ -338,7 +338,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Rigidbody2D: {fileID: 8358268469103774962}
-  speed: 3
+  speed: 2
   goesright: 0
   SR: {fileID: 1466942371879703922, guid: 7a51e48b335e05d43af0f873f886d8b9, type: 3}
   IsInfected: 0

@@ -27,7 +27,9 @@ public class wolfBehavior : MonoBehaviour
     public bool Isselfmasked;
     private int randomness;
     public InventoryObject inventory;
-    public GameObject WarningSign; 
+    public GameObject WarningSign;
+    //wait initally 
+    public float firstwait; 
 
     // Start is called before the first frame update
     void Start()
@@ -35,6 +37,7 @@ public class wolfBehavior : MonoBehaviour
         Rigidbody2D = GetComponent<Rigidbody2D>();
         SR = GetComponent<SpriteRenderer>(); 
         goesright = Random.Range(0,2)*2-1;
+        firstwait = 3f;
         //pick random number 
         randomness = Random.Range(0,9);
         if (randomness <= 9-(2*inventory.enemyTag.Count-2) && IsInfected == false)
@@ -46,10 +49,13 @@ public class wolfBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        movement = new Vector3(goesright, 0f, 0f);
-        Rigidbody2D.velocity = movement * speed;
-        Checkinfection();
-        
+        firstwait -= 1 * Time.deltaTime; 
+        if (firstwait <= 0) 
+        {
+            movement = new Vector3(goesright, 0f, 0f);
+            Rigidbody2D.velocity = movement * speed;
+            Checkinfection();
+        }
     }
 
     void Checkinfection()
@@ -99,7 +105,18 @@ public class wolfBehavior : MonoBehaviour
             alliessr.color = Color.red;
             collision.gameObject.GetComponent<wolfBehavior>().IsInfected = true;
         }
-
+        if (collision.gameObject.tag == "Wall" && Isselfmasked == false && IsInfected == false)
+        {
+            if (collision.gameObject.GetComponent<lifeTime>() != null)
+            {
+                int randomtemp = Random.Range(1, collision.gameObject.GetComponent<lifeTime>().percent);
+                if (randomtemp <= 10)
+                {
+                    SR.color = Color.red;
+                    IsInfected = true; 
+                }
+            }
+        }
     }
     void OnTriggerEnter2D(Collider2D collider)
     {
