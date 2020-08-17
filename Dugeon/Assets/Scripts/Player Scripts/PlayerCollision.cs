@@ -144,12 +144,12 @@ public class PlayerCollision : MonoBehaviour
             if (infectionrecord.uninfectedallies > infectionrecord.infectedallies)
             {
                 winendtitle.text = "You have passed";
-                winmessage.text = "Allies you saved: " + infectionrecord.uninfectedallies + "\n Rescure Ratio = " + infectionrecord.uninfectedallies / infectionrecord.infectedallies;
+                winmessage.text = "Allies you saved: " + infectionrecord.uninfectedallies + "\n Rescure Ratio: " + infectionrecord.uninfectedallies + "/" + infectionrecord.infectedallies;
             }
-            else
+            else if (infectionrecord.uninfectedallies < infectionrecord.infectedallies)
             {
                 winendtitle.text = "You have failed";
-                winmessage.text = "Allies you saved: " + infectionrecord.uninfectedallies + "\n Rescure Ratio = " + infectionrecord.uninfectedallies / infectionrecord.infectedallies;
+                winmessage.text = "Allies you saved: " + infectionrecord.uninfectedallies + "\n Rescure Ratio: " + infectionrecord.uninfectedallies + "/" + infectionrecord.infectedallies;
             }
         }
     }

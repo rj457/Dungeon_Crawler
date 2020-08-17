@@ -18,7 +18,7 @@ public class WallCollsion : MonoBehaviour
     {
         if (collision.gameObject.tag == "Walltrigger")
         {
-            Instantiate(Wall, spawnposition, Quaternion.identity);
+            Instantiate(Wall, new Vector3(spawnposition.x, collision.gameObject.transform.position.y, spawnposition.z), Quaternion.identity);
             Destroy(gameObject);
         }
         if (collision.gameObject.tag == "Virus")
