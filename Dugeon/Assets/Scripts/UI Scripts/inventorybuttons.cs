@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement; 
 
 public class inventorybuttons : MonoBehaviour
 {
     public GameObject equipSlot;
     public GameObject rockPrefab;
     public TextMeshProUGUI numbercount;
-    public InventoryObject inventory; 
+    public InventoryObject inventory;
+    public Animator transition; 
     
     public void OnRockClick()
     {
@@ -22,5 +24,16 @@ public class inventorybuttons : MonoBehaviour
         {
             return; 
         }
+    }
+    public void OnEnterPress()
+    {
+        StartCoroutine(PlayerEngage());
+    }
+
+    IEnumerator PlayerEngage()
+    {
+        transition.SetTrigger("Start");
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene(2);
     }
 }

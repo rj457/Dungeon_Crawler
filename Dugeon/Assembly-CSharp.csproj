@@ -77,6 +77,7 @@
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\EnemyBehavior\AIPathUpdate.cs" />
     <Compile Include="Assets\Scripts\EnemyBehavior\Patrol.cs" />
+    <Compile Include="Assets\Scripts\EnemyBehavior\mosterHover.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\PlayerCollision.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\Playermovement.cs" />
@@ -112,6 +113,7 @@
     <Compile Include="Assets\Scripts\UI Scripts\Scroller.cs" />
     <Compile Include="Assets\Scripts\UI Scripts\ShieldFollow.cs" />
     <Compile Include="Assets\Scripts\UI Scripts\UItimer.cs" />
+    <Compile Include="Assets\Scripts\UI Scripts\WebMover.cs" />
     <Compile Include="Assets\Scripts\UI Scripts\cavemandilog.cs" />
     <Compile Include="Assets\Scripts\UI Scripts\cursorBarrel.cs" />
     <Compile Include="Assets\Scripts\UI Scripts\faceMouse.cs" />

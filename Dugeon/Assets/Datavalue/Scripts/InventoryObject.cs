@@ -22,5 +22,11 @@ public class InventoryObject : ScriptableObject
     public int rockcounts;
     public int maskcounts;
     public int stainerizercounts;
-    public int wallcounts; 
+    public int wallcounts;
+    //check if player is caughed 
+    public bool isCaught;
+    public Vector3 monsterclickedpos;
+    //conting timer
+    public bool Isallalliesmasked;
+    public float masktimer; 
 }

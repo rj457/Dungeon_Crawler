@@ -19,7 +19,14 @@ public class InventoryController : MonoBehaviour
     //// Start is called before the first frame update
     void Start()
     {
-        currentTime = startTime; 
+        if (infectionrecord.Isallalliesmasked)
+        {
+            currentTime = startTime;
+        }
+        else
+        {
+            currentTime = infectionrecord.masktimer; 
+        }
     }
 
     // Update is called once per frame

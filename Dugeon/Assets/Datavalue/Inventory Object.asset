@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aba8f097afe968944a42dcf9275cfd2b, type: 3}
   m_Name: Inventory Object
   m_EditorClassIdentifier: 
-  uninfectedallies: 0
+  uninfectedallies: 2
   infectedallies: 0
   alliesisfollow: 0
   allies1isfollow: 0
   enemyTag: []
-  initialvalue: {x: -1, y: -15.8, z: 0}
+  initialvalue: {x: -1.27, y: -1.88, z: 0}
   Isbattle: 0
   allies: {x: 0, y: 0, z: 0}
   allies1: {x: 0, y: 0, z: 0}
@@ -27,3 +27,7 @@ MonoBehaviour:
   maskcounts: 0
   stainerizercounts: 0
   wallcounts: 0
+  isCaught: 0
+  monsterclickedpos: {x: 0, y: 0, z: 0}
+  Isallalliesmasked: 0
+  masktimer: 30

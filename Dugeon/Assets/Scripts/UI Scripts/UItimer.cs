@@ -22,7 +22,7 @@ public class UItimer : MonoBehaviour
     {
         if (infectedsheep.GetComponent<SpriteRenderer>().color == Color.cyan)
         {
-            infectedsheep.GetComponent<wolfBehavior>().IsInfected = false;
+            //infectedsheep.GetComponent<wolfBehavior>().IsInfected = false;
             infectedsheep.GetComponent<wolfBehavior>().Isselfmasked = true; 
             if (ismaskon == false)
             {

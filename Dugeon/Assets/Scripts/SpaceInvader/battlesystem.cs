@@ -16,7 +16,7 @@ public class battlesystem : MonoBehaviour
     public GameObject sheepPrefab;
     public GameObject wolfPrefab; 
     public Animator transition;
-    public countDownTimer timer;
+    //public countDownTimer timer;
     public GameObject timertext; 
     //public List<bool> sheeplist;
     public GameObject[] sheeps = null;
@@ -25,12 +25,17 @@ public class battlesystem : MonoBehaviour
     //update shoot inventory 
     public TextMeshProUGUI maskCount;
     public TextMeshProUGUI stainerizerCount;
-    public TextMeshProUGUI wallCount; 
+    public TextMeshProUGUI wallCount;
+    //timer and exit button
+    public GameObject exitbutton;
+    public GameObject timer;
+    private List<GameObject> allieslists; 
     
     // Start is called before the first frame update
     void Start()
     {
         //checkstartcondition();
+        checkiscaught(); 
         sqawnsheep();
         sqawnwolf();
         sheeps = GameObject.FindGameObjectsWithTag("Allies");
@@ -43,15 +48,34 @@ public class battlesystem : MonoBehaviour
             StartCoroutine(exitearly()); 
         }
     }
-
+    void checkiscaught()
+    {
+        if (infectionrecord.isCaught)
+        {
+            exitbutton.SetActive(false);
+            timer.SetActive(true); 
+        }
+        else
+        {
+            exitbutton.SetActive(true);
+            timer.SetActive(false); 
+        }
+    }
     void sqawnwolf()
     {
         while (infectionrecord.infectedallies != 0 )
         {
             List<Vector3> sqawnareas = new List<Vector3> {new Vector3(Random.Range(-9.71f,-5.9f),3.91f,10f), new Vector3(Random.Range(-2.18f, 2.12f), 3.91f, 10f),
-                new Vector3(Random.Range(5.71f, 9.78f), 3.91f, 10f)};
+                new Vector3(Random.Range(5.71f, 9.78f), -5.5f, 10f), new Vector3(Random.Range(-9.71f,-5.9f),-5.5f,10f)};
             int randspots = Random.Range(0, sqawnareas.Count - 1);
-            Instantiate(wolfPrefab, sqawnareas[randspots], Quaternion.identity);
+            if (sqawnareas[randspots].y == -5.5f)
+            {
+                Instantiate(wolfPrefab, sqawnareas[randspots], Quaternion.Euler(new Vector3(0f, 0f, 180f)));
+            }
+            else
+            {
+                Instantiate(wolfPrefab, sqawnareas[randspots], Quaternion.identity);
+            }
             infectionrecord.infectedallies -= 1; 
         }
     }
@@ -70,8 +94,10 @@ public class battlesystem : MonoBehaviour
     {
         checkhealth();
         updateInventory(); 
-        if ((heartcount.listgameobjects.Count == 0 || timer.currentTime == 0) && Isend == false)
+        if ((heartcount.listgameobjects.Count == 0 || timer.GetComponent<countDownTimer>().currentTime == 0) && Isend == false)
         {
+            infectionrecord.isCaught = false;
+            checkmaskcondition(); 
             StartCoroutine(exitencounter());
             Isend = true; 
         }
@@ -109,7 +135,22 @@ public class battlesystem : MonoBehaviour
             }
         }
     }
-
+    public void Onexit()
+    {
+        checkmaskcondition();
+        StartCoroutine(exitencounter()); 
+    }
+    void checkmaskcondition()
+    {
+        allieslists = new List<GameObject>(GameObject.FindGameObjectsWithTag("Allies")); 
+        foreach (GameObject allies in allieslists)
+        {
+            if (allies.GetComponent<wolfBehavior>().IsInfected && allies.GetComponent<wolfBehavior>().Isselfmasked == false)
+            {
+                infectionrecord.Isallalliesmasked = false; 
+            }
+        }
+    }
     IEnumerator exitearly()
     {
         timertext.SetActive(true);

@@ -49,7 +49,7 @@ public class Reset : MonoBehaviour
         infectionrecord.alliesisfollow = false;
         infectionrecord.allies1isfollow = false;
         infectionrecord.infectedallies = 0;
-        infectionrecord.uninfectedallies = 0; 
+        infectionrecord.uninfectedallies = 2; 
     }
     void restartenemy()
     {
@@ -71,6 +71,7 @@ public class Reset : MonoBehaviour
         infectionrecord.maskcounts = 0;
         infectionrecord.stainerizercounts = 0;
         infectionrecord.wallcounts = 0;
+        infectionrecord.masktimer = 30f; 
     }
     void resetPlayerPosition()
     {

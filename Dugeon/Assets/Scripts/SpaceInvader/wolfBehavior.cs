@@ -38,12 +38,12 @@ public class wolfBehavior : MonoBehaviour
         SR = GetComponent<SpriteRenderer>(); 
         goesright = Random.Range(0,2)*2-1;
         firstwait = 3f;
-        //pick random number 
-        randomness = Random.Range(0,9);
-        if (randomness <= 9-(2*inventory.enemyTag.Count-2) && IsInfected == false)
-        {
-            StartCoroutine(mutationStart()); 
-        }
+        ////pick random number 
+        //randomness = Random.Range(0,9);
+        //if (randomness <= 9-(2*inventory.enemyTag.Count-2) && IsInfected == false)
+        //{
+        //    StartCoroutine(mutationStart()); 
+        //}
     }
 
     // Update is called once per frame
@@ -99,7 +99,7 @@ public class wolfBehavior : MonoBehaviour
             goesright *= changedirection; 
         }
 
-        if (collision.gameObject.tag == "Allies" && IsInfected && collision.gameObject.GetComponent<wolfBehavior>().Isselfmasked == false)
+        if (collision.gameObject.tag == "Allies" && IsInfected && collision.gameObject.GetComponent<wolfBehavior>().Isselfmasked == false && Isselfmasked == false)
         {
             SpriteRenderer alliessr = collision.gameObject.GetComponent<SpriteRenderer>();
             alliessr.color = Color.red;
@@ -124,7 +124,6 @@ public class wolfBehavior : MonoBehaviour
         {
             Destroy(collider.gameObject);
             SR.color = Color.cyan;
-            IsInfected = false; 
             UItimer.enabled = true; 
         }
         if (collider.gameObject.tag == "Virus")
@@ -143,17 +142,17 @@ public class wolfBehavior : MonoBehaviour
         //}
     }
     
-    IEnumerator mutationStart()
-    {
-        yield return new WaitForSeconds(10f);
-        //show sign
-        GameObject tempsign = Instantiate(WarningSign, new Vector3(transform.position.x, transform.position.y + 1, transform.position.z), Quaternion.identity);
-        //stop speed
-        tempsign.transform.parent = gameObject.transform; 
-        //turn color and infected state 
-        yield return new WaitForSeconds(2f);
-        Destroy(tempsign);
-        SR.color = Color.red;
-        IsInfected = true; 
-    }
+    //IEnumerator mutationStart()
+    //{
+    //    yield return new WaitForSeconds(10f);
+    //    //show sign
+    //    GameObject tempsign = Instantiate(WarningSign, new Vector3(transform.position.x, transform.position.y + 1, transform.position.z), Quaternion.identity);
+    //    //stop speed
+    //    tempsign.transform.parent = gameObject.transform; 
+    //    //turn color and infected state 
+    //    yield return new WaitForSeconds(2f);
+    //    Destroy(tempsign);
+    //    SR.color = Color.red;
+    //    IsInfected = true; 
+    //}
 }

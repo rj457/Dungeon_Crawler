@@ -133,7 +133,8 @@ public class PlayerCollision : MonoBehaviour
         {
             //which enemy encounter 
             infectionrecord.enemyTag.Add(collider.gameObject.transform.parent.tag);
-            updateinfectionrecord(); 
+            updateinfectionrecord();
+            //Destroy(collider.transform.parent.gameObject);
             StartCoroutine(PlayerEngage());
         }
 
@@ -157,6 +158,7 @@ public class PlayerCollision : MonoBehaviour
     void updateinfectionrecord()
     {
         infectionrecord.Isbattle = true;
+        infectionrecord.isCaught = true; 
         playermovement.moveSpeed = 0;
         anim.enabled = false;
         infectionrecord.infectedallies += 1;
