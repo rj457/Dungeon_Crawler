@@ -1,0 +1,1565 @@
+fileFormatVersion: 2
+guid: 548acd361bdd2ea4a9a90990330dcb12
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5888571136473196865
+    second: cje-IdleLeft
+  - first:
+      213: 2365199737338201431
+    second: cje-CastLeft1
+  - first:
+      213: 5675038673245393615
+    second: cje-CastLeft2
+  - first:
+      213: -9140639308457899889
+    second: cje-CastLeft3
+  - first:
+      213: 4190955251183693521
+    second: cje-CastLeft4
+  - first:
+      213: -635243491027457492
+    second: cje-CastLeft5
+  - first:
+      213: 7465494403926257965
+    second: cje-CastLeft6
+  - first:
+      213: 107000024414253709
+    second: cje-Sprite Sheet Master_7
+  - first:
+      213: -4819502048248183331
+    second: cje-Sprite Sheet Master_8
+  - first:
+      213: -2042592267473789069
+    second: cje-Sprite Sheet Master_9
+  - first:
+      213: -1899826479667652139
+    second: cje-Sprite Sheet Master_10
+  - first:
+      213: 63648097343401392
+    second: cje-Sprite Sheet Master_11
+  - first:
+      213: -4287851165886623605
+    second: cje-Sprite Sheet Master_12
+  - first:
+      213: -1504474552878116740
+    second: cje-Sprite Sheet Master_13
+  - first:
+      213: -5038394402669437455
+    second: cje-Sprite Sheet Master_14
+  - first:
+      213: -975710916521840111
+    second: cje-WalkLeft1
+  - first:
+      213: 6203570312290607857
+    second: cje-WalkLeft2
+  - first:
+      213: -636919880896364257
+    second: cje-WalkLeft3
+  - first:
+      213: 2001662413841287522
+    second: cje-WalkLeft4
+  - first:
+      213: 136232437537049079
+    second: cje-WalkLeft5
+  - first:
+      213: -516124149969566285
+    second: WalkLeft6
+  - first:
+      213: -8785891305874193347
+    second: cje-Sprite Sheet Master_21
+  - first:
+      213: 731803152631503863
+    second: cje-WalkUp1
+  - first:
+      213: 7057263519003200609
+    second: cje-WalkUp2
+  - first:
+      213: -701504586173436210
+    second: cje-WalkUp3
+  - first:
+      213: -5767952405563058552
+    second: cje-WalkUp4
+  - first:
+      213: 317782849323638515
+    second: cje-WalkUp5
+  - first:
+      213: 9004888451412389290
+    second: cje-WalkUp6
+  - first:
+      213: 7678282139832131273
+    second: cje-WalkUp7
+  - first:
+      213: -5455212004930751323
+    second: cje-Sprite Sheet Master_29
+  - first:
+      213: 8347081698995544387
+    second: cje-Mining1
+  - first:
+      213: -5002083327201173789
+    second: cje-Mining2
+  - first:
+      213: 8687036297964929622
+    second: cje-Mining3
+  - first:
+      213: -5190853037853811758
+    second: cje-Mining4
+  - first:
+      213: -7829333050155984205
+    second: cje-Mining5
+  - first:
+      213: -1633396238117913238
+    second: cje-Mining6
+  - first:
+      213: -7340290569268928175
+    second: cje-Mining7
+  - first:
+      213: 344819642951270983
+    second: cje-Sprite Sheet Master_37
+  - first:
+      213: -2968170325388315730
+    second: cje-Damaged
+  - first:
+      213: 774147873687198554
+    second: cje-Sprite Sheet Master_39
+  - first:
+      213: 4330076854606300256
+    second: cje-Sprite Sheet Master_40
+  - first:
+      213: -8106892148838317177
+    second: cje-Sprite Sheet Master_41
+  - first:
+      213: 975240455516832784
+    second: cje-Sprite Sheet Master_42
+  - first:
+      213: 9050298591892503527
+    second: cje-Sprite Sheet Master_43
+  - first:
+      213: 5189466060155373925
+    second: cje-IdleLeft1
+  - first:
+      213: 3831131928180888646
+    second: cje-LeftIdle2
+  - first:
+      213: -1020491275340069643
+    second: cje-LeftIdle3
+  - first:
+      213: 1193934458329625368
+    second: cje-CastRight6
+  - first:
+      213: 1927492803959639406
+    second: cje-CastRight5
+  - first:
+      213: 1711673379219771526
+    second: cje-CastRight4
+  - first:
+      213: 529315518737702305
+    second: cje-CastRight3
+  - first:
+      213: -557609040050124855
+    second: cje-CastRight2
+  - first:
+      213: 2345936184679288174
+    second: cje-CastRight1
+  - first:
+      213: 7109992056384754464
+    second: cje-RightIdle
+  - first:
+      213: -4409916055328825480
+    second: cje-WalkRight6
+  - first:
+      213: -4132143730832556213
+    second: cje-WalkRight5
+  - first:
+      213: -8070739689238740134
+    second: cje-WalkRight4
+  - first:
+      213: -5028049881259357293
+    second: cje-WalkRight3
+  - first:
+      213: -4926099545953552495
+    second: cje-WalkRight2
+  - first:
+      213: 2680225774530805940
+    second: cje-WalkRight1
+  - first:
+      213: -1070465975186966193
+    second: cje-Sprite Sheet Master_60
+  - first:
+      213: -8925049642254920362
+    second: cje-IdleRight3
+  - first:
+      213: -5253922213681487898
+    second: cje-IdleRight2
+  - first:
+      213: -6685950282908551574
+    second: cje-IdleRight1
+  - first:
+      213: 7877737752853402177
+    second: cje-Sprite Sheet Master_64
+  - first:
+      213: 3929312685377799666
+    second: cje-Sprite Sheet Master_65
+  - first:
+      213: 2324900839716060739
+    second: cje-Sprite Sheet Master_66
+  - first:
+      213: -1703586535574603191
+    second: cje-Sprite Sheet Master_67
+  - first:
+      213: 1032612205097936573
+    second: cje-DownIdle
+  - first:
+      213: -166014634482110516
+    second: cje-Down1
+  - first:
+      213: -2122687813242876010
+    second: cje-Down2
+  - first:
+      213: -8127227503286380098
+    second: cje-Down3
+  - first:
+      213: 9119320092714332423
+    second: cje-Down4
+  - first:
+      213: -3330689212369338756
+    second: cje-Down5
+  - first:
+      213: 1592472455685072903
+    second: cje-Down6
+  - first:
+      213: 7134784371573972402
+    second: cje-Sprite Sheet Master_75
+  - first:
+      213: -3323895374023071208
+    second: cje-Sprite Sheet Master_76
+  - first:
+      213: -1787052587094375184
+    second: cje-Sprite Sheet Master_77
+  - first:
+      213: 9096180758544190090
+    second: cje-Sprite Sheet Master_78
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: cje-IdleLeft
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2872
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1496a18ef3868b150800000000000000
+      internalID: 5888571136473196865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cje-CastLeft1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 2872
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75504e631a0e2d020800000000000000
+      internalID: 2365199737338201431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cje-CastLeft2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 2872
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc2556d0b99c1ce40800000000000000
+      internalID: 5675038673245393615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cje-CastLeft3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 2872
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8805676afce52180800000000000000
+      internalID: -9140639308457899889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cje-CastLeft4
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 2872
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1deac58a893492a30800000000000000
+      internalID: 4190955251183693521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cje-CastLeft5
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 2872
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2aed6b19692f27f0800000000000000
+      internalID: -635243491027457492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cje-CastLeft6
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 2872
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d21f0b24b93ca9760800000000000000
+      internalID: 7465494403926257965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cje-WalkLeft1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 2360
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 112be3947149572f0800000000000000
+      internalID: -975710916521840111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cje-WalkLeft2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 2360
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f2ad33c452871650800000000000000
+      internalID: 6203570312290607857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cje-WalkLeft3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 2360
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f11c9cc2eb43927f0800000000000000
+      internalID: -636919880896364257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cje-WalkLeft4
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 2360
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 269c2413c5557cb10800000000000000
+      internalID: 2001662413841287522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cje-WalkLeft5
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 2360
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f9084e1eaef3e100800000000000000
+      internalID: 136232437537049079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WalkLeft6
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 2360
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b54015f1db56d8f0800000000000000
+      internalID: -516124149969566285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cje-WalkUp1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 2104
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fb9c1e0713e72a00800000000000000
+      internalID: 731803152631503863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cje-WalkUp2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 2104
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16c428097cf60f160800000000000000
+      internalID: 7057263519003200609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cje-WalkUp3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 2104
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ece23dcab41c346f0800000000000000
+      internalID: -701504586173436210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cje-WalkUp4
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 2104
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 886dd09d8dd14ffa0800000000000000
+      internalID: -5767952405563058552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cje-WalkUp5
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 2104
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fe95a951ddf86400800000000000000
+      internalID: 317782849323638515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cje-WalkUp6
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 2104
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aade37c265ac7fc70800000000000000
+      internalID: 9004888451412389290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cje-WalkUp7
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 2104
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ce9be5ccecbe8a60800000000000000
+      internalID: 7678282139832131273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cje-Mining1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1848
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3412bcb949ac6d370800000000000000
+      internalID: 8347081698995544387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cje-Mining2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1848
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ee154157b7059ab0800000000000000
+      internalID: -5002083327201173789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cje-Mining3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1848
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 652cf13bc7d8e8870800000000000000
+      internalID: 8687036297964929622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cje-Mining4
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1848
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2db57751aa266f7b0800000000000000
+      internalID: -5190853037853811758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cje-Mining5
+      rect:
+        serializedVersion: 2
+        x: 1284
+        y: 1848
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ba1a3d821f985390800000000000000
+      internalID: -7829333050155984205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cje-Mining6
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1848
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6db58986c20559e0800000000000000
+      internalID: -1633396238117913238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cje-Mining7
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1848
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15163962e9c022a90800000000000000
+      internalID: -7340290569268928175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cje-Damaged
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1592
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea3bf5aa0d0fec6d0800000000000000
+      internalID: -2968170325388315730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cje-IdleLeft1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1336
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 569c18103efa40840800000000000000
+      internalID: 5189466060155373925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cje-LeftIdle2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1336
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64411e2c03aea2530800000000000000
+      internalID: 3831131928180888646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cje-LeftIdle3
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1336
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f448f4879c76d1f0800000000000000
+      internalID: -1020491275340069643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cje-CastRight6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1080
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 813f5d96015b19010800000000000000
+      internalID: 1193934458329625368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cje-CastRight5
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1080
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6dc22f2e74dfba10800000000000000
+      internalID: 1927492803959639406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cje-CastRight4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1080
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68013eb9ed511c710800000000000000
+      internalID: 1711673379219771526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cje-CastRight3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1080
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ad567ce8a1885700800000000000000
+      internalID: 529315518737702305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cje-CastRight2
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1080
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c7044c4889f248f0800000000000000
+      internalID: -557609040050124855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cje-CastRight1
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1080
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6d4b89d7807e8020800000000000000
+      internalID: 2345936184679288174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cje-RightIdle
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1080
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02399acda14cba260800000000000000
+      internalID: 7109992056384754464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cje-WalkRight6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 824
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87f55d066b4dcc2c0800000000000000
+      internalID: -4409916055328825480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cje-WalkRight5
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 824
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4f3eda7b2da7a6c0800000000000000
+      internalID: -4132143730832556213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cje-WalkRight4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 824
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5347446309feff80800000000000000
+      internalID: -8070739689238740134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cje-WalkRight3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 824
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39b4792d547c83ab0800000000000000
+      internalID: -5028049881259357293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cje-WalkRight2
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 824
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 197b933009af2abb0800000000000000
+      internalID: -4926099545953552495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cje-WalkRight1
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 824
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b041c83423123520800000000000000
+      internalID: 2680225774530805940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cje-Sprite Sheet Master_60
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 824
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f49b6dcfdd0f421f0800000000000000
+      internalID: -1070465975186966193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cje-IdleRight3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 568
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6551ba623aad32480800000000000000
+      internalID: -8925049642254920362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cje-IdleRight2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 568
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ef1bf745915617b0800000000000000
+      internalID: -5253922213681487898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cje-IdleRight1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 568
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a66305134abb633a0800000000000000
+      internalID: -6685950282908551574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cje-DownIdle
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 312
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db6689b5453945e00800000000000000
+      internalID: 1032612205097936573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cje-Down1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 312
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccf6d2cc19232bdf0800000000000000
+      internalID: -166014634482110516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cje-Down2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 312
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69f8b9a2ea2ba82e0800000000000000
+      internalID: -2122687813242876010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cje-Down3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 312
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb994d945a9463f80800000000000000
+      internalID: -8127227503286380098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cje-Down4
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 312
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 701f15fde455e8e70800000000000000
+      internalID: 9119320092714332423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cje-Down5
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 312
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7eff7fdec307c1d0800000000000000
+      internalID: -3330689212369338756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cje-Down6
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 312
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 708e3bbd249991610800000000000000
+      internalID: 1592472455685072903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cje-Sprite Sheet Master_10
+      rect:
+        serializedVersion: 2
+        x: 1784
+        y: 2730
+        width: 1032
+        height: 366
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d95788e1e572a5e0800000000000000
+      internalID: -1899826479667652139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
