@@ -14,7 +14,9 @@ public class cursorBarrel : MonoBehaviour
     public InventoryObject inventory;
     public TextMeshProUGUI rockcounts; 
     public GameObject equipemptywarning;
-    public List<GameObject> supplies; 
+    public List<GameObject> supplies;
+    private bool IsFirstClicked = false;
+    private GameObject supply; 
     // Update is called once per frame
     void Update()
     {
@@ -39,17 +41,23 @@ public class cursorBarrel : MonoBehaviour
     public void OnMouseDown()
     {
         isbarrelclick = true;
-        if (GameObject.Find("RockSprite(Clone)") != null && inventory.rockcounts > 0)
+        if (GameObject.Find("RockSprite(Clone)") != null && inventory.rockcounts > 0 && IsFirstClicked == false)
         {
+            IsFirstClicked = true; 
             Vector3 spawnposition = new Vector3(player.transform.position.x, player.transform.position.y + 1, player.transform.position.z);
             Instantiate(rockPrefab, spawnposition, Quaternion.identity);
             inventory.rockcounts -= 1;
             rockcounts.text = inventory.rockcounts.ToString("0");
+            IsFirstClicked = true; 
         }
-        else
+        else if (GameObject.Find("RockSprite(Clone)") == null && inventory.rockcounts > 0)
         {
             StartCoroutine(showemptysign());
             isbarrelclick = false; 
+        }
+        if (IsFirstClicked)
+        {
+            return; 
         }
     }
 
@@ -63,8 +71,25 @@ public class cursorBarrel : MonoBehaviour
         if (collision.gameObject.tag == "Rock")
         {
             istouchingrock = true;
-            //Randomly sqawn supplies
-            GameObject supply = supplies[Random.Range(0, supplies.Count)];
+            //if maskcounts are zero and other's are either two 
+            if (inventory.maskcounts == 0 && (inventory.stainerizercounts >= inventory.maskcounts + 20 || inventory.wallcounts >= inventory.maskcounts + 20))
+            {
+                supply = supplies[0];
+            }
+            //if stanitizer are zero 
+            else if (inventory.stainerizercounts == 0 && (inventory.maskcounts >= inventory.stainerizercounts + 20 || inventory.wallcounts >= inventory.stainerizercounts + 20))
+            {
+                supply = supplies[1];
+            }
+            //if wallcounts are zero 
+            else if (inventory.wallcounts == 0 && (inventory.maskcounts >= inventory.wallcounts + 20 || inventory.stainerizercounts >= inventory.wallcounts + 20))
+            {
+                supply = supplies[2];
+            }
+            else 
+            {
+                supply = supplies[Random.Range(0, supplies.Count)];
+            }
             //Then instainiate
             Instantiate(supply, transform.position, Quaternion.identity);
             //Then destory this barrel 

@@ -110,10 +110,13 @@ public class wolfBehavior : MonoBehaviour
             if (collision.gameObject.GetComponent<lifeTime>() != null)
             {
                 int randomtemp = Random.Range(1, collision.gameObject.GetComponent<lifeTime>().percent);
-                if (randomtemp <= 10)
+                if (collision.gameObject.GetComponent<lifeTime>().percent <= 90)
                 {
-                    SR.color = Color.red;
-                    IsInfected = true; 
+                    if (randomtemp <= 10)
+                    {
+                        SR.color = Color.red;
+                        IsInfected = true;
+                    }
                 }
             }
         }
@@ -126,20 +129,12 @@ public class wolfBehavior : MonoBehaviour
             SR.color = Color.cyan;
             UItimer.enabled = true; 
         }
-        if (collider.gameObject.tag == "Virus")
+        if (collider.gameObject.tag == "Virus" && Isselfmasked == false)
         {
             Destroy(collider.gameObject);
             SR.color = Color.red;
             IsInfected = true;
-            //treatmentcounts = 0;
         }
-        //if (collider.gameObject.tag == "Potion")
-        //{
-        //    Destroy(collider.gameObject);
-        //    treatmentcounts += 1;
-        //    //red become dimmer
-        //    SR.color = new Color(255f/255f,SR.color.g + 83.3f/250f, SR.color.b + 83.3f / 250f);
-        //}
     }
     
     //IEnumerator mutationStart()

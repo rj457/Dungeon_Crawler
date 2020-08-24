@@ -22,7 +22,7 @@ public class UItimer : MonoBehaviour
     {
         if (infectedsheep.GetComponent<SpriteRenderer>().color == Color.cyan)
         {
-            //infectedsheep.GetComponent<wolfBehavior>().IsInfected = false;
+            //infectedsheep.GetComponent<wolfBehavior>().IsInfected = false; 
             infectedsheep.GetComponent<wolfBehavior>().Isselfmasked = true; 
             if (ismaskon == false)
             {
@@ -54,7 +54,15 @@ public class UItimer : MonoBehaviour
             Destroy(heloclone);
             ismaskon = false; 
             gameObject.GetComponent<TextMeshProUGUI>().enabled = false;
-            infectedsheep.GetComponent<SpriteRenderer>().color = Color.red;
+            infectedsheep.GetComponent<wolfBehavior>().Isselfmasked = false;
+            if (infectedsheep.GetComponent<wolfBehavior>().IsInfected) 
+            {
+                infectedsheep.GetComponent<SpriteRenderer>().color = Color.red;
+            }
+            else
+            {
+                infectedsheep.GetComponent<SpriteRenderer>().color = Color.white;
+            }
             waittime = resettime; 
         }
     }
