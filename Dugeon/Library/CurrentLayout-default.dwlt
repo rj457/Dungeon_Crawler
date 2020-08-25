@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 95
+  controlID: 16
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -94,8 +94,8 @@ MonoBehaviour:
     y: 0
     width: 463
     height: 596
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -338,20 +338,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Datavalue
+    - Assets/CJE-GameAssetsMaster/StaticAssets
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Datavalue
+  - Assets/CJE-GameAssetsMaster/StaticAssets
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\Bruce\Documents\GDAP\Dungeon_Crawler\Dugeon
+  m_LastProjectPath: D:\Dungeon Crawler work folder\FinalBuild\Dungeon_Crawler\Dugeon
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 207}
-    m_SelectedIDs: ec4c0000
-    m_LastClickedID: 19692
-    m_ExpandedIDs: 00000000b04c0000b24c0000b44c0000b64c0000b84c0000ba4c0000bc4c0000be4c0000c04c0000c24c0000c44c0000c64c0000c84c0000ca4c0000cc4c0000ce4c0000d04c0000d24c0000d44c0000d64c0000d84c0000f04c0000024d000000ca9a3b
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 70540000
+    m_LastClickedID: 21616
+    m_ExpandedIDs: 00000000a0500000a2500000a4500000a6500000a8500000aa500000ac500000ae500000b0500000b2500000b4500000b6500000b8500000ba500000bc500000be500000c0500000c2500000c4500000c6500000c8500000d6500000de5000007054000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -379,7 +379,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000b04c0000b24c0000b44c0000b64c0000b84c0000ba4c0000bc4c0000be4c0000c04c0000c24c0000c44c0000c64c0000c84c0000ca4c0000cc4c0000ce4c0000d04c0000d24c0000d44c0000d64c0000d84c0000
+    m_ExpandedIDs: 00000000a0500000a2500000a4500000a6500000a8500000aa500000ac500000ae500000b0500000b2500000b4500000b6500000b8500000ba500000bc500000be500000c0500000c2500000c4500000c6500000c8500000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -502,9 +502,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: e6480000
-      m_LastClickedID: 0
-      m_ExpandedIDs: 30fbffff32fbffff96440000de44000018450000
+      m_SelectedIDs: 38490000
+      m_LastClickedID: 18744
+      m_ExpandedIDs: f4ebffffe6480000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -564,9 +564,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -2.3796506, y: -10.127849, z: -6.5030627}
+    m_Target: {x: -11.116163, y: -9.907507, z: -30.468414}
     speed: 2
-    m_Value: {x: -2.3796506, y: -10.127849, z: -6.5030627}
+    m_Value: {x: -11.116163, y: -9.907507, z: -30.468414}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -616,9 +616,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 17.44015
+    m_Target: 16.703066
     speed: 2
-    m_Value: 17.44015
+    m_Value: 16.703066
   m_Ortho:
     m_Target: 1
     speed: 2
