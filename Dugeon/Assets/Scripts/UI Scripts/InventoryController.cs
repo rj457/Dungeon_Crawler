@@ -15,6 +15,10 @@ public class InventoryController : MonoBehaviour
     public TextMeshProUGUI maskcounts;
     public TextMeshProUGUI stainerizercounts;
     public TextMeshProUGUI wallcounts;
+    //guidence sign
+    public GameObject timetick;
+    public GameObject LostWarning;
+    public GameObject warningSolution; 
 
     //// Start is called before the first frame update
     void Start()
@@ -52,7 +56,16 @@ public class InventoryController : MonoBehaviour
         if (infectionrecord.infectedallies > 0 && infectionrecord.uninfectedallies > 0)
         {
             //start timer
+            timetick.SetActive(true);
+            LostWarning.SetActive(true);
+            warningSolution.SetActive(true);
             startTimer(); 
+        }
+        else
+        {
+            timetick.SetActive(false);
+            LostWarning.SetActive(false);
+            warningSolution.SetActive(false);
         }
     }
     void startTimer()

@@ -28,5 +28,10 @@ public class InventoryObject : ScriptableObject
     public Vector3 monsterclickedpos;
     //conting timer
     public bool Isallalliesmasked;
-    public float masktimer; 
+    public float masktimer;
+    public bool IsStartIntroopened;
+    //Skill
+    public bool IsskillCooldown;
+    public float skillcooldown;
+    public float skillfillamount;
 }

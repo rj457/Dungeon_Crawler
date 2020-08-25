@@ -8,7 +8,7 @@ public class CursorRock : MonoBehaviour
     public InventoryObject inventory;
     //cursorcontroller 
     public DragandDrop cursorcontroller;
-
+    public GameObject cursorInstruction; 
     void Update()
     {
         if (isrockclicked)
@@ -25,11 +25,13 @@ public class CursorRock : MonoBehaviour
     }
     public void OnMouseEnter()
     {
-        cursorcontroller.enableaxe(); 
+        cursorcontroller.enableaxe();
+        cursorInstruction.SetActive(true);
     }
     public void OnMouseExit()
     {
-        cursorcontroller.enablenormal(); 
+        cursorcontroller.enablenormal();
+        cursorInstruction.SetActive(false); 
     }
     public void OnMouseDown()
     {

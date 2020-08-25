@@ -13,7 +13,8 @@ public class cursorMask : MonoBehaviour
 
     void Start()
     {
-        cursorcontroller = GameObject.Find("CursorController").GetComponent<DragandDrop>();
+        //cursorcontroller = GameObject.Find("CursorController").GetComponent<DragandDrop>();
+        ismaskclicked = true; 
     }
 
     // Update is called once per frame
@@ -21,32 +22,33 @@ public class cursorMask : MonoBehaviour
     {
         if (ismaskclicked)
         {
+            loading.SetActive(true);
             loading.GetComponent<Slider>().value -= Time.deltaTime;
             if (loading.GetComponent<Slider>().value <= 0)
             {
                 Destroy(gameObject);
-                cursorcontroller.enablenormal();
+                //cursorcontroller.enablenormal();
                 inventory.maskcounts += 10;
                 ismaskclicked = false;
             }
         }
     }
-    public void OnMouseEnter()
-    {
-        cursorcontroller.enablechest();
-    }
-    public void OnMouseExit()
-    {
-        cursorcontroller.enablenormal();
-    }
-    public void OnMouseDown()
-    {
-        loading.SetActive(true);
-        ismaskclicked = true;
-    }
+    //public void OnMouseEnter()
+    //{
+    //    cursorcontroller.enablechest();
+    //}
+    //public void OnMouseExit()
+    //{
+    //    cursorcontroller.enablenormal();
+    //}
+    //public void OnMouseDown()
+    //{
+    //    loading.SetActive(true);
+    //    ismaskclicked = true;
+    //}
 
-    public void OnMouseUp()
-    {
-        cursorcontroller.enablenormal();
-    }
+    //public void OnMouseUp()
+    //{
+    //    cursorcontroller.enablenormal();
+    //}
 }

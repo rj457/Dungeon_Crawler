@@ -13,7 +13,8 @@ public class cursorWall : MonoBehaviour
 
     void Start()
     {
-        cursorcontroller = GameObject.Find("CursorController").GetComponent<DragandDrop>();
+        //cursorcontroller = GameObject.Find("CursorController").GetComponent<DragandDrop>();
+        isWallclicked = true; 
     }
 
     // Update is called once per frame
@@ -21,32 +22,33 @@ public class cursorWall : MonoBehaviour
     {
         if (isWallclicked)
         {
+            loading.SetActive(true);
             loading.GetComponent<Slider>().value -= Time.deltaTime;
             if (loading.GetComponent<Slider>().value <= 0)
             {
                 Destroy(gameObject);
-                cursorcontroller.enablenormal();
+                //cursorcontroller.enablenormal();
                 inventory.wallcounts += 10;
                 isWallclicked = false;
             }
         }
     }
-    public void OnMouseEnter()
-    {
-        cursorcontroller.enablechest();
-    }
-    public void OnMouseExit()
-    {
-        cursorcontroller.enablenormal();
-    }
-    public void OnMouseDown()
-    {
-        loading.SetActive(true);
-        isWallclicked = true;
-    }
+    //public void OnMouseEnter()
+    //{
+    //    cursorcontroller.enablechest();
+    //}
+    //public void OnMouseExit()
+    //{
+    //    cursorcontroller.enablenormal();
+    //}
+    //public void OnMouseDown()
+    //{
+    //    loading.SetActive(true);
+    //    isWallclicked = true;
+    //}
 
-    public void OnMouseUp()
-    {
-        cursorcontroller.enablenormal();
-    }
+    //public void OnMouseUp()
+    //{
+    //    cursorcontroller.enablenormal();
+    //}
 }

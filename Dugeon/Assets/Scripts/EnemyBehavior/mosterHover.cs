@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class mosterHover : MonoBehaviour
 {
@@ -8,14 +9,19 @@ public class mosterHover : MonoBehaviour
     public DragandDrop cursorcontroller;
     public bool monsterclicked = false;
     public GameObject web;
-    public InventoryObject monsterclickedpos; 
+    public InventoryObject monsterclickedpos;
+    public GameObject enemyinstruction;
+    public GameObject skillcooldown; 
 
     void Update()
     {
-        if (monsterclicked)
+        if (monsterclicked && infectionrecord.IsskillCooldown == false)
         {
+            infectionrecord.IsskillCooldown = true;
+            infectionrecord.skillfillamount = 1;
             Instantiate(web, new Vector3(GameObject.Find("Player").transform.position.x, GameObject.Find("Player").transform.position.y + 3f, GameObject.Find("Player").transform.position.z), Quaternion.identity);
-            monsterclicked = false; 
+            monsterclicked = false;
+            
         }
     }
 
@@ -23,10 +29,12 @@ public class mosterHover : MonoBehaviour
     public void OnMouseEnter()
     {
         cursorcontroller.enableaim();
+        enemyinstruction.SetActive(true); 
     }
     public void OnMouseExit()
     {
         cursorcontroller.enablenormal();
+        enemyinstruction.SetActive(false); 
     }
     public void OnMouseDown()
     {
@@ -37,5 +45,6 @@ public class mosterHover : MonoBehaviour
     public void OnMouseUp()
     {
         cursorcontroller.enablenormal();
+        monsterclicked = false; 
     }
 }

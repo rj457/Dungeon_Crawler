@@ -9,14 +9,16 @@ public class cursorBarrel : MonoBehaviour
     public DragandDrop cursorcontroller;
     public GameObject rockPrefab;
     public GameObject player;
-    public float rockspeed = 2f;
+    public float rockspeed = 8f;
     private bool istouchingrock;
     public InventoryObject inventory;
     public TextMeshProUGUI rockcounts; 
     public GameObject equipemptywarning;
     public List<GameObject> supplies;
     private bool IsFirstClicked = false;
-    private GameObject supply; 
+    private GameObject supply;
+    public GameObject barrelinstruction;
+    public GameObject equipwarnpointer; 
     // Update is called once per frame
     void Update()
     {
@@ -32,11 +34,13 @@ public class cursorBarrel : MonoBehaviour
     }
     public void OnMouseEnter()
     {
-        cursorcontroller.enableaim(); 
+        cursorcontroller.enableaim();
+        barrelinstruction.SetActive(true); 
     }
     public void OnMouseExit()
     {
-        cursorcontroller.enablenormal(); 
+        cursorcontroller.enablenormal();
+        barrelinstruction.SetActive(false); 
     }
     public void OnMouseDown()
     {
@@ -65,7 +69,6 @@ public class cursorBarrel : MonoBehaviour
     {
         cursorcontroller.enablenormal();
     }
-
     void OnTriggerEnter2D (Collider2D collision)
     {
         if (collision.gameObject.tag == "Rock")
@@ -100,7 +103,9 @@ public class cursorBarrel : MonoBehaviour
     IEnumerator showemptysign()
     {
         equipemptywarning.SetActive(true);
+        equipwarnpointer.SetActive(true); 
         yield return new WaitForSeconds(3f);
-        equipemptywarning.SetActive(false); 
+        equipemptywarning.SetActive(false);
+        equipwarnpointer.SetActive(false);
     }
 }

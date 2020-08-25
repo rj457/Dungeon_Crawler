@@ -149,6 +149,10 @@ public class battlesystem : MonoBehaviour
             {
                 infectionrecord.Isallalliesmasked = false; 
             }
+            else
+            {
+                infectionrecord.Isallalliesmasked = true; 
+            }
         }
     }
     IEnumerator exitearly()

@@ -19,8 +19,8 @@ public class Playermovement : MonoBehaviour
     //grab player health
     public HealthBar playerhealth;
     public GameObject shield;
-    public InventoryObject infectionrecord; 
-
+    public InventoryObject infectionrecord;
+    public GameObject StartIntro; 
     
 
     void Start()
@@ -34,7 +34,7 @@ public class Playermovement : MonoBehaviour
         }
         if (moveSpeed == 0)
         {
-            moveSpeed = 5; 
+            moveSpeed = 15; 
         }
         if (anim == false)
         {
@@ -50,11 +50,19 @@ public class Playermovement : MonoBehaviour
             helo.SetActive(false);
             shield.SetActive(true);
         }
-
+        if (infectionrecord.IsStartIntroopened == false)
+        {
+            introstart();
+        }
         playerhealth.SetHealth(recordplayer.playerhealth); 
         
     }
-    
+    void introstart()
+    {
+        StartIntro.SetActive(true);
+        moveSpeed = 0;
+        infectionrecord.IsStartIntroopened = true; 
+    }
 
     IEnumerator Waittime(int time)
     {

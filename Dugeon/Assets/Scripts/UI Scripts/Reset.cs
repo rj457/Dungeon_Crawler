@@ -17,9 +17,11 @@ public class Reset : MonoBehaviour
     public InventoryObject infectionrecord;
     //enemy object 
     public List<GameObject> enemylists;
+    public GameObject startintro; 
 
     public void OnResetButton()
     {
+        infectionrecord.IsStartIntroopened = false; 
         recordplayer.IsShield = false;
         shield.SetActive(true);
         recordplayer.playerhealth = 100;
@@ -31,6 +33,7 @@ public class Reset : MonoBehaviour
         clearenemyencounterlist();
         resetInventory();
         resetPlayerPosition();
+        resetskillcooldown(); 
         SceneManager.LoadScene(1);
     }
   
@@ -41,6 +44,11 @@ public class Reset : MonoBehaviour
     public void OnCloseButton()
     {
         winend.SetActive(false);
+    }
+    public void OnCloseIntro()
+    {
+        startintro.SetActive(false);
+        Player.GetComponent<Playermovement>().moveSpeed = 15; 
     }
     void resetallies()
     {
@@ -77,5 +85,10 @@ public class Reset : MonoBehaviour
     {
         Player.transform.position = new Vector3(-1.27f, -1.88f, 0f);
         infectionrecord.initialvalue = new Vector3(-1.27f, -1.88f, 0f);
+    }
+    void resetskillcooldown()
+    {
+        infectionrecord.skillfillamount = 0;
+        infectionrecord.IsskillCooldown = false; 
     }
 }
