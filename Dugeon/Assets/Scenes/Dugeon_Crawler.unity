@@ -8691,7 +8691,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 0.7688679, b: 0.98145217, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.1
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 0}
@@ -16923,6 +16923,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6941952538213869272, guid: 02f543ec1b216f04c81bb75a4073b30a,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941952538213869272, guid: 02f543ec1b216f04c81bb75a4073b30a,
+        type: 3}
+      propertyPath: m_LightVolumeOpacity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941952538213869272, guid: 02f543ec1b216f04c81bb75a4073b30a,
+        type: 3}
+      propertyPath: m_ShadowIntensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941952538213869272, guid: 02f543ec1b216f04c81bb75a4073b30a,
+        type: 3}
+      propertyPath: m_UseNormalMap
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941952538213869272, guid: 02f543ec1b216f04c81bb75a4073b30a,
+        type: 3}
+      propertyPath: m_LightOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941952538213869274, guid: 02f543ec1b216f04c81bb75a4073b30a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6941952538366407302, guid: 02f543ec1b216f04c81bb75a4073b30a,
         type: 3}
       propertyPath: helo
@@ -17053,6 +17083,26 @@ PrefabInstance:
       propertyPath: winmessage
       value: 
       objectReference: {fileID: 825510535}
+    - target: {fileID: 6941952538613003613, guid: 02f543ec1b216f04c81bb75a4073b30a,
+        type: 3}
+      propertyPath: m_PointLightInnerRadius
+      value: 9.72
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941952538613003613, guid: 02f543ec1b216f04c81bb75a4073b30a,
+        type: 3}
+      propertyPath: m_PointLightInnerAngle
+      value: 117
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941952538613003613, guid: 02f543ec1b216f04c81bb75a4073b30a,
+        type: 3}
+      propertyPath: m_PointLightOuterAngle
+      value: 175
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941952538613003613, guid: 02f543ec1b216f04c81bb75a4073b30a,
+        type: 3}
+      propertyPath: m_ShadowIntensity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6941952538654611042, guid: 02f543ec1b216f04c81bb75a4073b30a,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -17166,6 +17216,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7551661034703964910, guid: f27e6dc96101a8841bfc7db6184e31cc,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -126.75
       objectReference: {fileID: 0}
     - target: {fileID: 7551661034928589611, guid: f27e6dc96101a8841bfc7db6184e31cc,
         type: 3}

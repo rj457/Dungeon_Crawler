@@ -107,6 +107,7 @@
     <Compile Include="Assets\Scripts\UI Scripts\FirstCountDown.cs" />
     <Compile Include="Assets\Scripts\UI Scripts\HealthBar.cs" />
     <Compile Include="Assets\Scripts\UI Scripts\InventoryController.cs" />
+    <Compile Include="Assets\Scripts\UI Scripts\IsButtonhover.cs" />
     <Compile Include="Assets\Scripts\UI Scripts\MenuController.cs" />
     <Compile Include="Assets\Scripts\UI Scripts\PickBarrel.cs" />
     <Compile Include="Assets\Scripts\UI Scripts\Reset.cs" />

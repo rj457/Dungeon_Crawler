@@ -29,7 +29,8 @@ public class battlesystem : MonoBehaviour
     //timer and exit button
     public GameObject exitbutton;
     public GameObject timer;
-    private List<GameObject> allieslists; 
+    private List<GameObject> allieslists;
+
     
     // Start is called before the first frame update
     void Start()
@@ -70,7 +71,9 @@ public class battlesystem : MonoBehaviour
             int randspots = Random.Range(0, sqawnareas.Count - 1);
             if (sqawnareas[randspots].y == -5.5f)
             {
-                Instantiate(wolfPrefab, sqawnareas[randspots], Quaternion.Euler(new Vector3(0f, 0f, 180f)));
+                GameObject Wolftemp = Instantiate(wolfPrefab, sqawnareas[randspots], Quaternion.Euler(new Vector3(0f, 0f, 180f)));
+                GameObject Canvastemp = Wolftemp.transform.Find("Canvas").gameObject; 
+                Canvastemp.GetComponent<RectTransform>().Rotate(new Vector3(0f,0f,180f));
             }
             else
             {
@@ -84,7 +87,9 @@ public class battlesystem : MonoBehaviour
         while (infectionrecord.uninfectedallies != 0)
         {
             Vector3 spawnPosition = new Vector3(Random.Range(-11f, 11f), -5.5f, 10f);
-            Instantiate(sheepPrefab, spawnPosition, Quaternion.Euler(new Vector3(0f,0f,180f)));
+            GameObject Wolftemp1 = Instantiate(sheepPrefab, spawnPosition, Quaternion.Euler(new Vector3(0f,0f,180f)));
+            GameObject Canvastemp1 = Wolftemp1.transform.Find("Canvas").gameObject;
+            Canvastemp1.GetComponent<RectTransform>().Rotate(new Vector3(0f, 0f, 180f));
             infectionrecord.uninfectedallies -= 1; 
         }
     }

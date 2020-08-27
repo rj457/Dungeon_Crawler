@@ -17,12 +17,14 @@ public class shootTowards : MonoBehaviour
     public GameObject stainerizerPrefab;
     //wall properties
     private float wallcooldown = 11;
-    public GameObject wallPrefab; 
+    public GameObject wallPrefab;
+    public GameObject exitbutton;
+    private bool isMousehoverbutton; 
 
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.visible = false; 
+        Cursor.visible = false;
     }
 
     // Update is called once per frame
@@ -38,7 +40,7 @@ public class shootTowards : MonoBehaviour
     }
     void checkmousepress()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && exitbutton.GetComponent<IsButtonhover>().isexitbuttonhover == false)
         {   
             //if mask been selected shoot mask out
             if (scroller.indication == 1)
@@ -82,6 +84,7 @@ public class shootTowards : MonoBehaviour
             }
         }
     }
+    //Skill Cool Down 
     IEnumerator skillmask()
     {
         yield return new WaitForSeconds(2);
