@@ -18,7 +18,6 @@ public class Playermovement : MonoBehaviour
     public recordplayer recordPlayer;
     //grab player health
     public HealthBar playerhealth;
-    public GameObject shield;
     public InventoryObject infectionrecord;
     public GameObject StartIntro; 
     
@@ -40,16 +39,16 @@ public class Playermovement : MonoBehaviour
         {
             anim.enabled = true;
         }
-        if (recordPlayer.IsShield == true)
-        {
-            helo.SetActive(true);
-            shield.SetActive(false); 
-        }
-        else
-        {
-            helo.SetActive(false);
-            shield.SetActive(true);
-        }
+        //if (recordPlayer.IsShield == true)
+        //{
+        //    helo.SetActive(true);
+        //    shield.SetActive(false); 
+        //}
+        //else
+        //{
+        //    helo.SetActive(false);
+        //    shield.SetActive(true);
+        //}
         if (infectionrecord.IsStartIntroopened == false)
         {
             introstart();
