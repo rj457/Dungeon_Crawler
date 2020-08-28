@@ -8,7 +8,6 @@ using UnityEngine.SceneManagement;
 public class Reset : MonoBehaviour
 {
     // Start is called before the first frame update
-    public GameObject shield;
     public recordplayer recordplayer;
     public GameObject allies;
     public GameObject allies1;
@@ -23,7 +22,6 @@ public class Reset : MonoBehaviour
     {
         infectionrecord.IsStartIntroopened = false; 
         recordplayer.IsShield = false;
-        shield.SetActive(true);
         recordplayer.playerhealth = 100;
         recordplayer.IsFollow = false;
         winend.SetActive(false);
