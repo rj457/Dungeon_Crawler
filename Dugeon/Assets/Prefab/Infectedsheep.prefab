@@ -194,13 +194,13 @@ MonoBehaviour:
   m_margin: {x: 1.1668597, y: 0.4915095, z: 1.1061707, w: 1.7281892}
   m_textInfo:
     textComponent: {fileID: 1262109829741795222}
-    characterCount: 2
+    characterCount: 0
     spriteCount: 0
     spaceCount: 0
-    wordCount: 1
+    wordCount: 0
     linkCount: 0
-    lineCount: 1
-    pageCount: 1
+    lineCount: 0
+    pageCount: 0
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -261,8 +261,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4528155250447025380}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.64, y: -4.33, z: 10}
-  m_LocalScale: {x: 0.25279033, y: 0.50582224, z: 1}
+  m_LocalPosition: {x: -5.7861, y: -4.6665, z: 10}
+  m_LocalScale: {x: 0.25, y: 0.5, z: 1}
   m_Children:
   - {fileID: 4024370905205347225}
   - {fileID: 223776679707077141}
@@ -367,7 +367,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.29, y: 1.2}
+  m_Size: {x: 2.2, y: 1}
   m_EdgeRadius: 0
 --- !u!114 &8002885891863736969
 MonoBehaviour:
