@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aba8f097afe968944a42dcf9275cfd2b, type: 3}
   m_Name: Inventory Object
   m_EditorClassIdentifier: 
-  uninfectedallies: 2
+  uninfectedallies: 1
   infectedallies: 0
   alliesisfollow: 0
   allies1isfollow: 0
@@ -28,10 +28,10 @@ MonoBehaviour:
   stainerizercounts: 0
   wallcounts: 0
   isCaught: 0
-  monsterclickedpos: {x: 57.78567, y: 1.300508, z: -8}
+  monsterclickedpos: {x: 62.99994, y: 1.2993164, z: -8}
   Isallalliesmasked: 0
   masktimer: 30
-  IsStartIntroopened: 0
+  IsStartIntroopened: 1
   IsskillCooldown: 0
   skillcooldown: 15
   skillfillamount: 0

@@ -55,7 +55,7 @@ public class Reset : MonoBehaviour
         infectionrecord.alliesisfollow = false;
         infectionrecord.allies1isfollow = false;
         infectionrecord.infectedallies = 0;
-        infectionrecord.uninfectedallies = 2; 
+        infectionrecord.uninfectedallies = 1; 
     }
     void restartenemy()
     {

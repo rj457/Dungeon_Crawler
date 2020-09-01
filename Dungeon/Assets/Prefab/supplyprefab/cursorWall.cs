@@ -28,7 +28,7 @@ public class cursorWall : MonoBehaviour
             {
                 Destroy(gameObject);
                 //cursorcontroller.enablenormal();
-                inventory.wallcounts += 10;
+                inventory.wallcounts += 5;
                 isWallclicked = false;
             }
         }

@@ -28,7 +28,7 @@ public class cursorMask : MonoBehaviour
             {
                 Destroy(gameObject);
                 //cursorcontroller.enablenormal();
-                inventory.maskcounts += 10;
+                inventory.maskcounts += 5;
                 ismaskclicked = false;
             }
         }

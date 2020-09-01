@@ -8,7 +8,9 @@ public class CursorRock : MonoBehaviour
     public InventoryObject inventory;
     //cursorcontroller 
     public DragandDrop cursorcontroller;
-    public GameObject cursorInstruction; 
+    public GameObject cursorInstruction;
+    public Onselectionhover selethover;
+    private bool isselecthover; 
     void Update()
     {
         if (isrockclicked)
@@ -18,15 +20,24 @@ public class CursorRock : MonoBehaviour
             {
                 Destroy(gameObject);
                 cursorcontroller.enablenormal();
-                inventory.rockcounts += 10;
+                inventory.rockcounts += 4;
                 isrockclicked = false;
             }
         }
+        isselecthover = selethover.ismouseoverselbox; 
     }
     public void OnMouseEnter()
     {
-        cursorcontroller.enableaxe();
-        cursorInstruction.SetActive(true);
+        if (isselecthover == false)
+        {
+            cursorcontroller.enableaxe();
+            cursorInstruction.SetActive(true);
+        }
+        else
+        {
+            cursorcontroller.enablenormal();
+            cursorInstruction.SetActive(false);
+        }
     }
     public void OnMouseExit()
     {
@@ -35,10 +46,13 @@ public class CursorRock : MonoBehaviour
     }
     public void OnMouseDown()
     {
-        loading.SetActive(true);
-        isrockclicked = true;
-        cursorInstruction.SetActive(false);
-        cursorcontroller.enablenormal();
+        if (isselecthover == false)
+        {
+            loading.SetActive(true);
+            isrockclicked = true;
+            cursorInstruction.SetActive(false);
+            cursorcontroller.enablenormal();
+        }
     }
 
     public void OnMouseUp()

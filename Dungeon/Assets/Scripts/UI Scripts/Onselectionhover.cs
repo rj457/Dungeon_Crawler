@@ -6,7 +6,7 @@ public class Onselectionhover : MonoBehaviour
 {
     public bool ismouseoverselbox;
 
-    public void OnMouseEnter()
+    public void OnMouseOver()
     {
         ismouseoverselbox = true; 
     }

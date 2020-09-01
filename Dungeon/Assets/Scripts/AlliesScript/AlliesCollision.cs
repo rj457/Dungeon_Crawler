@@ -10,14 +10,18 @@ public class AlliesCollision : MonoBehaviour
     public GameObject rescueDialog;
     public TextMeshProUGUI textpro;
     string firstSentence = "Player:\n I am here to rescue you.";
-    string secondSentence = "Player:\n Come to my universe and stay for now. It is safe.";
+    string secondSentence = "Player:\n Stay in my pocket universe for now.";
+    string thirdSentence = "Player:\n We’ll all get out of here together.";
     bool alliesclicked = false;
     bool safnet = true; 
     
     public bool Isinfected;
     public InventoryObject infectionrecord;
-    public DragandDrop cursorcontroller; 
- 
+    public DragandDrop cursorcontroller;
+
+    public Onselectionhover selethover;
+    private bool isselecthover;
+
     void Update()
     {
 
@@ -26,7 +30,7 @@ public class AlliesCollision : MonoBehaviour
             StartCoroutine(dialogStart());
             updateinfection(); 
         }
-        
+        isselecthover = selethover.ismouseoverselbox;
     }
  
     void updateinfection()
@@ -50,6 +54,8 @@ public class AlliesCollision : MonoBehaviour
         yield return new WaitForSeconds(3f);
         textpro.text = secondSentence;
         yield return new WaitForSeconds(3f);
+        textpro.text = thirdSentence;
+        yield return new WaitForSeconds(3f); 
         rescueDialog.SetActive(false);
         //update following status
         updateSqawn();
@@ -70,7 +76,14 @@ public class AlliesCollision : MonoBehaviour
     }
     public void OnMouseEnter()
     {
-        cursorcontroller.enablechat();
+        if (isselecthover == false)
+        {
+            cursorcontroller.enablechat();
+        }
+        else
+        {
+            cursorcontroller.enablenormal();
+        }
     }
     public void OnMouseExit()
     {
@@ -78,8 +91,12 @@ public class AlliesCollision : MonoBehaviour
     }
     public void OnMouseDown()
     {
-        alliesclicked = true;
-        cursorcontroller.enablenormal();
+        if (isselecthover == false)
+        {
+            alliesclicked = true;
+            cursorcontroller.enablenormal();
+        }
+       
     }
 
     public void OnMouseUp()

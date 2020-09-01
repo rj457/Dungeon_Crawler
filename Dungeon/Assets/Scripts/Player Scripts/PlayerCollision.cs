@@ -41,7 +41,7 @@ public class PlayerCollision : MonoBehaviour
     public TextMeshProUGUI uninfectedcounts;
     //win end title 
     public TextMeshProUGUI winendtitle;
-    public TextMeshProUGUI winmessage; 
+    //public TextMeshProUGUI winmessage; 
     
     //update per fame
     void Update()
@@ -141,17 +141,19 @@ public class PlayerCollision : MonoBehaviour
         if(collider.gameObject.tag == "Door")
         {
             winend.SetActive(true);
-            
-            if (infectionrecord.uninfectedallies > infectionrecord.infectedallies)
-            {
-                winendtitle.text = "You have passed";
-                winmessage.text = "Allies you saved: " + infectionrecord.uninfectedallies + "\n Rescure Ratio: " + infectionrecord.uninfectedallies + "/" + infectionrecord.infectedallies;
-            }
-            else if (infectionrecord.uninfectedallies < infectionrecord.infectedallies)
-            {
-                winendtitle.text = "You have failed";
-                winmessage.text = "Allies you saved: " + infectionrecord.uninfectedallies + "\n Rescure Ratio: " + infectionrecord.uninfectedallies + "/" + infectionrecord.infectedallies;
-            }
+
+            //if (infectionrecord.uninfectedallies > infectionrecord.infectedallies)
+            //{
+            //    winendtitle.text = "You have passed";
+
+            //}
+            winendtitle.text = "Allies you saved: " + infectionrecord.uninfectedallies + "\n Rescure Ratio: " + infectionrecord.uninfectedallies + "/" + infectionrecord.infectedallies;
+            //winmessage.text = "Allies you saved: " + infectionrecord.uninfectedallies + "\n Rescure Ratio: " + infectionrecord.uninfectedallies + "/" + infectionrecord.infectedallies;
+            //else if (infectionrecord.uninfectedallies < infectionrecord.infectedallies)
+            //{
+            //    winendtitle.text = "You have failed";
+                
+            //}
         }
     }
 
