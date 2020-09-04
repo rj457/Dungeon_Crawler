@@ -10,9 +10,7 @@ public class PlayerCollision : MonoBehaviour
 {
     public GameObject helo;
     public HealthBar healthBar;
-    //health
-    public int maxHealth = 100;
-    public int currentHealth;
+
     //time
     public float period = 2f;
     //bool logic pravite 
@@ -23,8 +21,6 @@ public class PlayerCollision : MonoBehaviour
     public GameObject seconddialog;
     //get animator 
     public Animator transition;
-    //player location before enter battle
-    public recordplayer recordplayer; 
     //public recordplayer recordplayer; 
     public Playermovement playermovement;
     public Animator anim;
@@ -47,7 +43,6 @@ public class PlayerCollision : MonoBehaviour
     void Update()
     {
         checkCM();
-        checkshield();
         //update health in runtime; 
         checkhealth();
         checkinventory();
@@ -74,7 +69,12 @@ public class PlayerCollision : MonoBehaviour
     }
     void checkhealth()
     {
-        healthBar.SetHealth(recordplayer.playerhealth);
+        healthBar.SetHealth(infectionrecord.playerhealth);
+        if (infectionrecord.playerhealth <= 0)
+        {
+            winend.SetActive(true);
+            winendtitle.text = "Allies you saved: " + infectionrecord.uninfectedallies + "\n Rescue Ratio(uninfected/infected): " + infectionrecord.uninfectedallies + "/" + infectionrecord.infectedallies;
+        }
     }
 
 
@@ -89,23 +89,11 @@ public class PlayerCollision : MonoBehaviour
         }
     }
 
-    void checkshield()
-    {
-        if (recordplayer.IsShield == true)
-        {
-            helo.SetActive(true);
-        }
-        else
-        {
-            helo.SetActive(false);
-        }
-    }
 
     void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.gameObject.tag == "Shield")
         {
-            recordplayer.IsShield = true;
             Shield.SetActive(false); 
             helo.SetActive(true);
             
@@ -114,13 +102,13 @@ public class PlayerCollision : MonoBehaviour
         if (collider.gameObject.tag == "Potion")
         {
             Destroy(collider.gameObject);
-            if ((recordplayer.playerhealth += 20) >= 100)
+            if ((infectionrecord.playerhealth += 20) >= 100)
             {
-                recordplayer.playerhealth = 100; 
+                infectionrecord.playerhealth = 100; 
             }
             else
             {
-                recordplayer.playerhealth += 20; 
+                infectionrecord.playerhealth += 20; 
             }
         }
 
@@ -141,19 +129,7 @@ public class PlayerCollision : MonoBehaviour
         if(collider.gameObject.tag == "Door")
         {
             winend.SetActive(true);
-
-            //if (infectionrecord.uninfectedallies > infectionrecord.infectedallies)
-            //{
-            //    winendtitle.text = "You have passed";
-
-            //}
-            winendtitle.text = "Allies you saved: " + infectionrecord.uninfectedallies + "\n Rescure Ratio: " + infectionrecord.uninfectedallies + "/" + infectionrecord.infectedallies;
-            //winmessage.text = "Allies you saved: " + infectionrecord.uninfectedallies + "\n Rescure Ratio: " + infectionrecord.uninfectedallies + "/" + infectionrecord.infectedallies;
-            //else if (infectionrecord.uninfectedallies < infectionrecord.infectedallies)
-            //{
-            //    winendtitle.text = "You have failed";
-                
-            //}
+            winendtitle.text = "Allies you saved: " + infectionrecord.uninfectedallies + "\n Rescue Ratio(uninfected/infected): " + infectionrecord.uninfectedallies + "/" + infectionrecord.infectedallies;
         }
     }
 

@@ -28,8 +28,15 @@ public class mosterHover : MonoBehaviour
     // Start is called before the first frame update
     public void OnMouseEnter()
     {
-        cursorcontroller.enableaim();
-        enemyinstruction.SetActive(true); 
+        if (monsterclickedpos.ismouseonselectbox == false)
+        {
+            cursorcontroller.enableaim();
+            enemyinstruction.SetActive(true);
+        }
+        else
+        {
+            return; 
+        }
     }
     public void OnMouseExit()
     {
@@ -38,10 +45,17 @@ public class mosterHover : MonoBehaviour
     }
     public void OnMouseDown()
     {
-        monsterclicked = true;
-        monsterclickedpos.monsterclickedpos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        enemyinstruction.SetActive(false);
-        cursorcontroller.enablenormal();
+        if (monsterclickedpos.ismouseonselectbox == false)
+        {
+            monsterclicked = true;
+            monsterclickedpos.monsterclickedpos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            enemyinstruction.SetActive(false);
+            cursorcontroller.enablenormal();
+        }
+        else
+        {
+            return;
+        }
     }
 
     public void OnMouseUp()

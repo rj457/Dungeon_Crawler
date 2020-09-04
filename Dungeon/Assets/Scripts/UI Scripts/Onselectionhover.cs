@@ -1,17 +1,31 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems; 
 
 public class Onselectionhover : MonoBehaviour
 {
-    public bool ismouseoverselbox;
+    public InventoryObject inventory;
+    public CursorRock cursorRock;
 
-    public void OnMouseOver()
+    private void Update()
     {
-        ismouseoverselbox = true; 
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            inventory.ismouseonselectbox = true;
+        }
+        else
+        {
+            inventory.ismouseonselectbox = false;
+        }
     }
-    public void OnMouseExit()
-    {
-        ismouseoverselbox = false;
-    }
+
+    //public void OnMouseOver()
+    //{
+       
+    //}
+    //public void OnMouseExit()
+    //{
+
+    //}
 }

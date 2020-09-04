@@ -1035,8 +1035,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 39
-  m_fontSizeBase: 39
+  m_fontSize: 35
+  m_fontSizeBase: 35
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2333,7 +2333,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19e12fc9656a1a74899f1331c7f98f1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ismouseoverselbox: 0
+  inventory: {fileID: 11400000, guid: ce868272b5cc87d4eab3ef62c941b487, type: 2}
+  cursorRock: {fileID: 0}
 --- !u!1 &6709850411588660646
 GameObject:
   m_ObjectHideFlags: 0
@@ -7264,7 +7265,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Screen
+  m_text: Pocket
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

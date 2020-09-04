@@ -122,6 +122,9 @@
     <Compile Include="Assets\Scripts\UI Scripts\faceMouse.cs" />
     <Compile Include="Assets\Scripts\UI Scripts\inventorybuttons.cs" />
     <Compile Include="Assets\Scripts\UI Scripts\lightdirection.cs" />
+    <Compile Include="Assets\Scripts\UI Scripts\maskcooldown.cs" />
+    <Compile Include="Assets\Scripts\UI Scripts\wallcooldown.cs" />
+    <Compile Include="Assets\Scripts\UI Scripts\washcooldown.cs" />
     <Compile Include="Assets\Scripts\levelloaderscript\LevelLoder.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />

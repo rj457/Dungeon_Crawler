@@ -30,7 +30,6 @@ public class AlliesCollision : MonoBehaviour
             StartCoroutine(dialogStart());
             updateinfection(); 
         }
-        isselecthover = selethover.ismouseoverselbox;
     }
  
     void updateinfection()
@@ -76,7 +75,7 @@ public class AlliesCollision : MonoBehaviour
     }
     public void OnMouseEnter()
     {
-        if (isselecthover == false)
+        if (infectionrecord.ismouseonselectbox == false)
         {
             cursorcontroller.enablechat();
         }
@@ -91,10 +90,14 @@ public class AlliesCollision : MonoBehaviour
     }
     public void OnMouseDown()
     {
-        if (isselecthover == false)
+        if (infectionrecord.ismouseonselectbox == false)
         {
             alliesclicked = true;
             cursorcontroller.enablenormal();
+        }
+        else
+        {
+            return; 
         }
        
     }

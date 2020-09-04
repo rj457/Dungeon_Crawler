@@ -79,6 +79,7 @@ public class Reset : MonoBehaviour
         infectionrecord.maskcounts = 0;
         infectionrecord.stainerizercounts = 0;
         infectionrecord.wallcounts = 0;
+        infectionrecord.playerhealth = 50; 
         infectionrecord.masktimer = 30f; 
     }
     void resetPlayerPosition()

@@ -9,8 +9,7 @@ public class CursorRock : MonoBehaviour
     //cursorcontroller 
     public DragandDrop cursorcontroller;
     public GameObject cursorInstruction;
-    public Onselectionhover selethover;
-    private bool isselecthover; 
+    public bool isRockenter; 
     void Update()
     {
         if (isrockclicked)
@@ -24,11 +23,11 @@ public class CursorRock : MonoBehaviour
                 isrockclicked = false;
             }
         }
-        isselecthover = selethover.ismouseoverselbox; 
     }
     public void OnMouseEnter()
     {
-        if (isselecthover == false)
+        isRockenter = true; 
+        if (inventory.ismouseonselectbox == false)
         {
             cursorcontroller.enableaxe();
             cursorInstruction.SetActive(true);
@@ -41,17 +40,22 @@ public class CursorRock : MonoBehaviour
     }
     public void OnMouseExit()
     {
+        isRockenter = false; 
         cursorcontroller.enablenormal();
         cursorInstruction.SetActive(false); 
     }
     public void OnMouseDown()
     {
-        if (isselecthover == false)
+        if (inventory.ismouseonselectbox == false)
         {
             loading.SetActive(true);
             isrockclicked = true;
             cursorInstruction.SetActive(false);
             cursorcontroller.enablenormal();
+        }
+        else
+        {
+            return; 
         }
     }
 

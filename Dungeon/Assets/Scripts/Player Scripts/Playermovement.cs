@@ -24,7 +24,6 @@ public class Playermovement : MonoBehaviour
 
     void Start()
     {
-        
         if (infectionrecord.Isbattle)
         {
             infectionrecord.Isbattle = false;
@@ -39,21 +38,11 @@ public class Playermovement : MonoBehaviour
         {
             anim.enabled = true;
         }
-        //if (recordPlayer.IsShield == true)
-        //{
-        //    helo.SetActive(true);
-        //    shield.SetActive(false); 
-        //}
-        //else
-        //{
-        //    helo.SetActive(false);
-        //    shield.SetActive(true);
-        //}
         if (infectionrecord.IsStartIntroopened == false)
         {
             introstart();
         }
-        playerhealth.SetHealth(recordplayer.playerhealth); 
+        playerhealth.SetHealth(infectionrecord.playerhealth); 
         
     }
     void introstart()

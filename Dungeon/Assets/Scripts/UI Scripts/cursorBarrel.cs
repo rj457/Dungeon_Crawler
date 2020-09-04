@@ -19,11 +19,11 @@ public class cursorBarrel : MonoBehaviour
     private GameObject supply;
     public GameObject barrelinstruction;
     public GameObject equipwarnpointer;
-    public Onselectionhover boxhover; 
+
     // Update is called once per frame
     void Update()
     {
-        if (isbarrelclick && boxhover.ismouseoverselbox == false)
+        if (isbarrelclick)
         {
             //if maskcounts are zero and other's are either two 
             if (inventory.maskcounts == 0 && (inventory.stainerizercounts >= inventory.maskcounts + 10 || inventory.wallcounts >= inventory.maskcounts + 10))
@@ -53,8 +53,16 @@ public class cursorBarrel : MonoBehaviour
     }
     public void OnMouseEnter()
     {
-        cursorcontroller.enableaim();
-        barrelinstruction.SetActive(true); 
+        if (inventory.ismouseonselectbox == false)
+        {
+            cursorcontroller.enableaim();
+            barrelinstruction.SetActive(true);
+        }
+        else
+        {
+            return; 
+        }
+        
     }
     public void OnMouseExit()
     {
@@ -63,22 +71,29 @@ public class cursorBarrel : MonoBehaviour
     }
     public void OnMouseDown()
     {
-        if (GameObject.Find("RockSprite(Clone)") != null && inventory.rockcounts > 0 && IsFirstClicked == false)
+        if (inventory.ismouseonselectbox == false)
         {
-            IsFirstClicked = true;
-            isbarrelclick = true;
-            inventory.barrelstag.Add(gameObject.name);
-            cursorcontroller.enablenormal();
-            barrelinstruction.SetActive(false);
-            inventory.rockcounts -= 1;
-            rockcounts.text = inventory.rockcounts.ToString("0");
+            if (GameObject.Find("RockSprite(Clone)") != null && inventory.rockcounts > 0 && IsFirstClicked == false)
+            {
+                IsFirstClicked = true;
+                isbarrelclick = true;
+                inventory.barrelstag.Add(gameObject.name);
+                cursorcontroller.enablenormal();
+                barrelinstruction.SetActive(false);
+                inventory.rockcounts -= 1;
+                rockcounts.text = inventory.rockcounts.ToString("0");
+            }
+            else if (GameObject.Find("RockSprite(Clone)") == null && inventory.rockcounts > 0)
+            {
+                StartCoroutine(showemptysign());
+                isbarrelclick = false;
+            }
+            if (IsFirstClicked)
+            {
+                return;
+            }
         }
-        else if (GameObject.Find("RockSprite(Clone)") == null && inventory.rockcounts > 0)
-        {
-            StartCoroutine(showemptysign());
-            isbarrelclick = false; 
-        }
-        if (IsFirstClicked)
+        else
         {
             return; 
         }

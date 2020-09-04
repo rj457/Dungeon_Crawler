@@ -35,4 +35,7 @@ public class InventoryObject : ScriptableObject
     public float skillcooldown;
     public float skillfillamount;
     public List<string> barrelstag;
+    //Selection Box 
+    public bool ismouseonselectbox;
+    public int playerhealth; 
 }

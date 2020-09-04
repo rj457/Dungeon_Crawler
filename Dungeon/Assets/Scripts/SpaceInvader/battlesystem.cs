@@ -99,12 +99,20 @@ public class battlesystem : MonoBehaviour
     {
         checkhealth();
         updateInventory(); 
-        if ((heartcount.listgameobjects.Count == 0 || timer.GetComponent<countDownTimer>().currentTime == 0) && Isend == false)
+        if (timer.GetComponent<countDownTimer>().currentTime == 0 && Isend == false)
         {
             infectionrecord.isCaught = false;
             checkmaskcondition(); 
             StartCoroutine(exitencounter());
             Isend = true; 
+        }
+        else if (heartcount.listgameobjects.Count == 0 && Isend == false)
+        {
+            infectionrecord.isCaught = false;
+            checkmaskcondition();
+            infectionrecord.playerhealth -= 20; 
+            StartCoroutine(exitencounter());
+            Isend = true;
         }
        
     }

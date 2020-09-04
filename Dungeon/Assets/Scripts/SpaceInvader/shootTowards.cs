@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.UI; 
 
 public class shootTowards : MonoBehaviour
 {
@@ -19,7 +20,10 @@ public class shootTowards : MonoBehaviour
     private float wallcooldown = 11;
     public GameObject wallPrefab;
     public GameObject exitbutton;
-    private bool isMousehoverbutton; 
+    //skillcooldown
+    public GameObject maskLoader;
+    public GameObject washLoader;
+    public GameObject wallLoader; 
 
     // Start is called before the first frame update
     void Start()
@@ -45,59 +49,44 @@ public class shootTowards : MonoBehaviour
             //if mask been selected shoot mask out
             if (scroller.indication == 1)
             {
-                if (inventory.maskcounts > 0 && maskcooldown > 10)
+                if (inventory.maskcounts > 0 && maskLoader.GetComponent<maskcooldown>().ismaskbooldown == false)
                 {
-                    maskcooldown = 0;
+                    maskLoader.GetComponent<maskcooldown>().ismaskbooldown = true;
+                    maskLoader.GetComponent<Image>().fillAmount = 1; 
                     //instainate this prefab
                     Instantiate(maskPrefab,spawnposition.transform.position,Quaternion.identity);
                     inventory.maskcounts -= 1; 
                     //fly towards mouse position without stop 
                     clickedposition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                    StartCoroutine(skillmask());
                 }
             }
             //if stainerizer has been selected 
             if (scroller.indication == 2)
             {
-                if (inventory.stainerizercounts > 0 && stainerizercooldown > 10)
+                if (inventory.stainerizercounts > 0 && washLoader.GetComponent<washcooldown>().iswashcooldown == false)
                 {
-                    stainerizercooldown = 0;
+                    washLoader.GetComponent<washcooldown>().iswashcooldown = true;
+                    washLoader.GetComponent<Image>().fillAmount = 1;
                     Instantiate(stainerizerPrefab, spawnposition.transform.position, Quaternion.identity);
                     inventory.stainerizercounts -= 1;
                     //fly towards mouse position without stop 
                     clickedposition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                    StartCoroutine(skillstainerizer());
                 }
             }
             //if wall has been selected
             if (scroller.indication == 3)
             {
-                if (inventory.wallcounts > 0 && wallcooldown > 10)
+                if (inventory.wallcounts > 0 && wallLoader.GetComponent<wallcooldown>().iswallcooldown == false)
                 {
-                    wallcooldown = 0;
+                    wallLoader.GetComponent<wallcooldown>().iswallcooldown = true;
+                    wallLoader.GetComponent<Image>().fillAmount = 1;
                     Instantiate(wallPrefab, spawnposition.transform.position, Quaternion.identity);
                     inventory.wallcounts -= 1;
                     //fly towards mouse position without stop 
                     clickedposition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                    StartCoroutine(skillwall());
                 }
             }
         }
     }
-    //Skill Cool Down 
-    IEnumerator skillmask()
-    {
-        yield return new WaitForSeconds(2);
-        maskcooldown = 11;
-    }
-    IEnumerator skillstainerizer()
-    {
-        yield return new WaitForSeconds(2);
-        stainerizercooldown = 11; 
-    }
-    IEnumerator skillwall()
-    {
-        yield return new WaitForSeconds(2);
-        wallcooldown = 11;
-    }
+    
 }
