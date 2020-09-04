@@ -10,7 +10,8 @@ public class AlliesSqawn : MonoBehaviour
     public GameObject allies1;
     public InventoryObject encountername;
     private GameObject enemy;
-    private GameObject barrel; 
+    private GameObject barrel;
+    private GameObject ally; 
     // Start is called before the first frame update
     void Start()
     {
@@ -21,21 +22,20 @@ public class AlliesSqawn : MonoBehaviour
 
     void checkalliessqawn()
     {
-        if (infectionrecord.alliesisfollow)
+        if (encountername.alliesTag != null)
         {
-            allies.SetActive(false);
+            foreach(string allyname in encountername.alliesTag)
+            {
+                ally = GameObject.Find(allyname);
+                if (ally != null)
+                {
+                    ally.SetActive(false); 
+                }
+            }
         }
-        else
+        else if (encountername.alliesTag == null)
         {
-            allies.SetActive(true);
-        }
-        if (infectionrecord.allies1isfollow)
-        {
-            allies1.SetActive(false); 
-        }
-        else
-        {
-            allies1.SetActive(true); 
+            return; 
         }
     }
 

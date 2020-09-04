@@ -10,7 +10,6 @@ public class cursorBarrel : MonoBehaviour
     public GameObject rockPrefab;
     public GameObject player;
     public float rockspeed = 8f;
-    private bool istouchingrock;
     public InventoryObject inventory;
     public TextMeshProUGUI rockcounts; 
     public GameObject equipemptywarning;
@@ -19,6 +18,7 @@ public class cursorBarrel : MonoBehaviour
     private GameObject supply;
     public GameObject barrelinstruction;
     public GameObject equipwarnpointer;
+    public GameObject needmorerocks; 
 
     // Update is called once per frame
     void Update()
@@ -88,7 +88,11 @@ public class cursorBarrel : MonoBehaviour
                 StartCoroutine(showemptysign());
                 isbarrelclick = false;
             }
-            if (IsFirstClicked)
+            else if (GameObject.Find("RockSprite(Clone)") == null && inventory.rockcounts == 0)
+            {
+                StartCoroutine(shownorocksign());
+            }
+            else if (IsFirstClicked)
             {
                 return;
             }
@@ -103,37 +107,7 @@ public class cursorBarrel : MonoBehaviour
     {
         cursorcontroller.enablenormal();
     }
-    //void OnTriggerEnter2D (Collider2D collision)
-    //{
-    //    if (collision.gameObject.tag == "Rock")
-    //    {
-    //        istouchingrock = true;
-    //        //if maskcounts are zero and other's are either two 
-    //        if (inventory.maskcounts == 0 && (inventory.stainerizercounts >= inventory.maskcounts + 20 || inventory.wallcounts >= inventory.maskcounts + 20))
-    //        {
-    //            supply = supplies[0];
-    //        }
-    //        //if stanitizer are zero 
-    //        else if (inventory.stainerizercounts == 0 && (inventory.maskcounts >= inventory.stainerizercounts + 20 || inventory.wallcounts >= inventory.stainerizercounts + 20))
-    //        {
-    //            supply = supplies[1];
-    //        }
-    //        //if wallcounts are zero 
-    //        else if (inventory.wallcounts == 0 && (inventory.maskcounts >= inventory.wallcounts + 20 || inventory.stainerizercounts >= inventory.wallcounts + 20))
-    //        {
-    //            supply = supplies[2];
-    //        }
-    //        else 
-    //        {
-    //            supply = supplies[Random.Range(0, supplies.Count)];
-    //        }
-    //        //Then instainiate
-    //        Instantiate(supply, transform.position, Quaternion.identity);
-    //        //Then destory this barrel 
-    //        Destroy(collision.gameObject);
-    //        Destroy(gameObject);
-    //    }
-    //}
+
     IEnumerator showemptysign()
     {
         equipemptywarning.SetActive(true);
@@ -141,5 +115,11 @@ public class cursorBarrel : MonoBehaviour
         yield return new WaitForSeconds(3f);
         equipemptywarning.SetActive(false);
         equipwarnpointer.SetActive(false);
+    }
+    IEnumerator shownorocksign()
+    {
+        needmorerocks.SetActive(true);
+        yield return new WaitForSeconds(3f);
+        needmorerocks.SetActive(false); 
     }
 }

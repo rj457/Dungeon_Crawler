@@ -47,6 +47,7 @@ ScriptsOnlyBuild:
     - recordplayer
     - shielddown
     - shootTowards
+    - totalAlliesFound
     - wallcooldown
     - washcooldown
     - wolfBehavior
@@ -241,6 +242,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 16820}
     - Class: 114
       Script: {instanceID: 16904}
+    - Class: 114
+      Script: {instanceID: 53594}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1298,7 +1301,7 @@ ScriptsOnlyBuild:
     className: VertexJitter
   - hash:
       serializedVersion: 2
-      Hash: 2d62dcbd67c4bf0ab024b976753ced86
+      Hash: 163cf22faf33a3c72e49822abf3fa96e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: InventoryObject
@@ -2132,7 +2135,7 @@ ScriptsOnlyBuild:
     className: TMP_SubMesh
   - hash:
       serializedVersion: 2
-      Hash: 408a3bf033d0098c35043fb68985f8dc
+      Hash: b4c3130e02002a0afceda7e45807d1d7
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: cursorBarrel
@@ -2280,6 +2283,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: d887f58a75b38049591d10a1f7f6fbd0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: totalAlliesFound
   platform: 5
   scenePathNames:
   - Assets/Scenes/StartMenu.unity

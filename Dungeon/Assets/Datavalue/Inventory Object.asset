@@ -14,9 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uninfectedallies: 1
   infectedallies: 0
-  alliesisfollow: 0
-  allies1isfollow: 0
   enemyTag: []
+  alliesTag: []
   initialvalue: {x: -1.27, y: -1.88, z: 0}
   Isbattle: 0
   allies: {x: 0, y: 0, z: 0}
@@ -28,8 +27,8 @@ MonoBehaviour:
   stainerizercounts: 0
   wallcounts: 0
   isCaught: 0
-  monsterclickedpos: {x: 56.43971, y: -5.5904174, z: -8}
-  Isallalliesmasked: 0
+  monsterclickedpos: {x: 57.522232, y: -2.7969415, z: -8}
+  Isallalliesmasked: 1
   masktimer: 30
   IsStartIntroopened: 0
   IsskillCooldown: 0

@@ -123,6 +123,7 @@
     <Compile Include="Assets\Scripts\UI Scripts\inventorybuttons.cs" />
     <Compile Include="Assets\Scripts\UI Scripts\lightdirection.cs" />
     <Compile Include="Assets\Scripts\UI Scripts\maskcooldown.cs" />
+    <Compile Include="Assets\Scripts\UI Scripts\totalAlliesFound.cs" />
     <Compile Include="Assets\Scripts\UI Scripts\wallcooldown.cs" />
     <Compile Include="Assets\Scripts\UI Scripts\washcooldown.cs" />
     <Compile Include="Assets\Scripts\levelloaderscript\LevelLoder.cs" />

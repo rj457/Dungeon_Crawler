@@ -52,10 +52,9 @@ public class Reset : MonoBehaviour
     {
         allies.SetActive(true);
         allies1.SetActive(true);
-        infectionrecord.alliesisfollow = false;
-        infectionrecord.allies1isfollow = false;
         infectionrecord.infectedallies = 0;
-        infectionrecord.uninfectedallies = 1; 
+        infectionrecord.uninfectedallies = 1;
+        infectionrecord.alliesTag.Clear(); 
     }
     void restartenemy()
     {
@@ -80,7 +79,7 @@ public class Reset : MonoBehaviour
         infectionrecord.stainerizercounts = 0;
         infectionrecord.wallcounts = 0;
         infectionrecord.playerhealth = 50; 
-        infectionrecord.masktimer = 30f; 
+        infectionrecord.masktimer = 30f;
     }
     void resetPlayerPosition()
     {

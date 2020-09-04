@@ -454,6 +454,11 @@ PrefabInstance:
       propertyPath: boxhover
       value: 
       objectReference: {fileID: 1309605193}
+    - target: {fileID: 1352258775064220423, guid: 6048837c43c1ed04dac540629ad3feeb,
+        type: 3}
+      propertyPath: needmorerocks
+      value: 
+      objectReference: {fileID: 6709850411620290257}
     - target: {fileID: 1352258775064220474, guid: 6048837c43c1ed04dac540629ad3feeb,
         type: 3}
       propertyPath: m_Name
@@ -564,6 +569,11 @@ PrefabInstance:
       propertyPath: boxhover
       value: 
       objectReference: {fileID: 1309605193}
+    - target: {fileID: 1352258775064220423, guid: 6048837c43c1ed04dac540629ad3feeb,
+        type: 3}
+      propertyPath: needmorerocks
+      value: 
+      objectReference: {fileID: 6709850411620290257}
     - target: {fileID: 1352258775064220474, guid: 6048837c43c1ed04dac540629ad3feeb,
         type: 3}
       propertyPath: m_Name
@@ -794,6 +804,11 @@ PrefabInstance:
       propertyPath: boxhover
       value: 
       objectReference: {fileID: 1309605193}
+    - target: {fileID: 1352258775064220423, guid: 6048837c43c1ed04dac540629ad3feeb,
+        type: 3}
+      propertyPath: needmorerocks
+      value: 
+      objectReference: {fileID: 6709850411620290257}
     - target: {fileID: 1352258775064220474, guid: 6048837c43c1ed04dac540629ad3feeb,
         type: 3}
       propertyPath: m_Name
@@ -11596,6 +11611,11 @@ PrefabInstance:
       propertyPath: boxhover
       value: 
       objectReference: {fileID: 1309605193}
+    - target: {fileID: 1352258775064220423, guid: 6048837c43c1ed04dac540629ad3feeb,
+        type: 3}
+      propertyPath: needmorerocks
+      value: 
+      objectReference: {fileID: 6709850411620290257}
     - target: {fileID: 1352258775064220474, guid: 6048837c43c1ed04dac540629ad3feeb,
         type: 3}
       propertyPath: m_Name
@@ -11706,6 +11726,11 @@ PrefabInstance:
       propertyPath: boxhover
       value: 
       objectReference: {fileID: 1309605193}
+    - target: {fileID: 1352258775064220423, guid: 6048837c43c1ed04dac540629ad3feeb,
+        type: 3}
+      propertyPath: needmorerocks
+      value: 
+      objectReference: {fileID: 6709850411620290257}
     - target: {fileID: 1352258775064220474, guid: 6048837c43c1ed04dac540629ad3feeb,
         type: 3}
       propertyPath: m_Name
@@ -12026,6 +12051,11 @@ PrefabInstance:
       propertyPath: boxhover
       value: 
       objectReference: {fileID: 1309605193}
+    - target: {fileID: 1352258775064220423, guid: 6048837c43c1ed04dac540629ad3feeb,
+        type: 3}
+      propertyPath: needmorerocks
+      value: 
+      objectReference: {fileID: 6709850411620290257}
     - target: {fileID: 1352258775064220474, guid: 6048837c43c1ed04dac540629ad3feeb,
         type: 3}
       propertyPath: m_Name
@@ -19224,6 +19254,11 @@ PrefabInstance:
       propertyPath: boxhover
       value: 
       objectReference: {fileID: 1309605193}
+    - target: {fileID: 1352258775064220423, guid: 6048837c43c1ed04dac540629ad3feeb,
+        type: 3}
+      propertyPath: needmorerocks
+      value: 
+      objectReference: {fileID: 6709850411620290257}
     - target: {fileID: 1352258775064220474, guid: 6048837c43c1ed04dac540629ad3feeb,
         type: 3}
       propertyPath: m_Name
@@ -19450,12 +19485,12 @@ PrefabInstance:
     - target: {fileID: 8661801936424350396, guid: 71d973ac2cc8b8145974e04a15e17b61,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.64
+      value: 13.36
       objectReference: {fileID: 0}
     - target: {fileID: 8661801936424350396, guid: 71d973ac2cc8b8145974e04a15e17b61,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 12.95
+      value: 12.15
       objectReference: {fileID: 0}
     - target: {fileID: 8661801936424350396, guid: 71d973ac2cc8b8145974e04a15e17b61,
         type: 3}
@@ -19584,6 +19619,11 @@ PrefabInstance:
       propertyPath: boxhover
       value: 
       objectReference: {fileID: 1309605193}
+    - target: {fileID: 1352258775064220423, guid: 6048837c43c1ed04dac540629ad3feeb,
+        type: 3}
+      propertyPath: needmorerocks
+      value: 
+      objectReference: {fileID: 6709850411620290257}
     - target: {fileID: 1352258775064220474, guid: 6048837c43c1ed04dac540629ad3feeb,
         type: 3}
       propertyPath: m_Name
@@ -19592,12 +19632,12 @@ PrefabInstance:
     - target: {fileID: 1352258775064220475, guid: 6048837c43c1ed04dac540629ad3feeb,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.15
+      value: 3.85
       objectReference: {fileID: 0}
     - target: {fileID: 1352258775064220475, guid: 6048837c43c1ed04dac540629ad3feeb,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.55
+      value: 7.52
       objectReference: {fileID: 0}
     - target: {fileID: 1352258775064220475, guid: 6048837c43c1ed04dac540629ad3feeb,
         type: 3}
@@ -19835,6 +19875,11 @@ PrefabInstance:
       propertyPath: boxhover
       value: 
       objectReference: {fileID: 1309605193}
+    - target: {fileID: 1352258775064220423, guid: 6048837c43c1ed04dac540629ad3feeb,
+        type: 3}
+      propertyPath: needmorerocks
+      value: 
+      objectReference: {fileID: 6709850411620290257}
     - target: {fileID: 1352258775064220474, guid: 6048837c43c1ed04dac540629ad3feeb,
         type: 3}
       propertyPath: m_Name
@@ -20090,6 +20135,11 @@ PrefabInstance:
       propertyPath: boxhover
       value: 
       objectReference: {fileID: 1309605193}
+    - target: {fileID: 1352258775064220423, guid: 6048837c43c1ed04dac540629ad3feeb,
+        type: 3}
+      propertyPath: needmorerocks
+      value: 
+      objectReference: {fileID: 6709850411620290257}
     - target: {fileID: 1352258775064220474, guid: 6048837c43c1ed04dac540629ad3feeb,
         type: 3}
       propertyPath: m_Name
@@ -20983,6 +21033,11 @@ PrefabInstance:
       propertyPath: boxhover
       value: 
       objectReference: {fileID: 1309605193}
+    - target: {fileID: 1352258775064220423, guid: 6048837c43c1ed04dac540629ad3feeb,
+        type: 3}
+      propertyPath: needmorerocks
+      value: 
+      objectReference: {fileID: 6709850411620290257}
     - target: {fileID: 1352258775064220474, guid: 6048837c43c1ed04dac540629ad3feeb,
         type: 3}
       propertyPath: m_Name
@@ -21263,6 +21318,11 @@ PrefabInstance:
       propertyPath: boxhover
       value: 
       objectReference: {fileID: 1309605193}
+    - target: {fileID: 1352258775064220423, guid: 6048837c43c1ed04dac540629ad3feeb,
+        type: 3}
+      propertyPath: needmorerocks
+      value: 
+      objectReference: {fileID: 6709850411620290257}
     - target: {fileID: 1352258775064220474, guid: 6048837c43c1ed04dac540629ad3feeb,
         type: 3}
       propertyPath: m_Name
@@ -21271,12 +21331,12 @@ PrefabInstance:
     - target: {fileID: 1352258775064220475, guid: 6048837c43c1ed04dac540629ad3feeb,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.17
+      value: 7.03
       objectReference: {fileID: 0}
     - target: {fileID: 1352258775064220475, guid: 6048837c43c1ed04dac540629ad3feeb,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.48
+      value: 15.65
       objectReference: {fileID: 0}
     - target: {fileID: 1352258775064220475, guid: 6048837c43c1ed04dac540629ad3feeb,
         type: 3}
@@ -21435,6 +21495,11 @@ PrefabInstance:
       propertyPath: boxhover
       value: 
       objectReference: {fileID: 1309605193}
+    - target: {fileID: 1352258775064220423, guid: 6048837c43c1ed04dac540629ad3feeb,
+        type: 3}
+      propertyPath: needmorerocks
+      value: 
+      objectReference: {fileID: 6709850411620290257}
     - target: {fileID: 1352258775064220474, guid: 6048837c43c1ed04dac540629ad3feeb,
         type: 3}
       propertyPath: m_Name
@@ -21838,6 +21903,11 @@ PrefabInstance:
       propertyPath: boxhover
       value: 
       objectReference: {fileID: 1309605193}
+    - target: {fileID: 1352258775064220423, guid: 6048837c43c1ed04dac540629ad3feeb,
+        type: 3}
+      propertyPath: needmorerocks
+      value: 
+      objectReference: {fileID: 6709850411620290257}
     - target: {fileID: 1352258775064220474, guid: 6048837c43c1ed04dac540629ad3feeb,
         type: 3}
       propertyPath: m_Name
@@ -21846,12 +21916,12 @@ PrefabInstance:
     - target: {fileID: 1352258775064220475, guid: 6048837c43c1ed04dac540629ad3feeb,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.9
+      value: 11.84
       objectReference: {fileID: 0}
     - target: {fileID: 1352258775064220475, guid: 6048837c43c1ed04dac540629ad3feeb,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.49
+      value: 12.38
       objectReference: {fileID: 0}
     - target: {fileID: 1352258775064220475, guid: 6048837c43c1ed04dac540629ad3feeb,
         type: 3}
@@ -22697,87 +22767,40 @@ PrefabInstance:
       propertyPath: cursorRock
       value: 
       objectReference: {fileID: 1417709574}
-    - target: {fileID: 6709850411038246770, guid: f27e6dc96101a8841bfc7db6184e31cc,
+    - target: {fileID: 4933352232140040211, guid: f27e6dc96101a8841bfc7db6184e31cc,
         type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 29
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6709850411038246770, guid: f27e6dc96101a8841bfc7db6184e31cc,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6709850411038246771, guid: f27e6dc96101a8841bfc7db6184e31cc,
-        type: 3}
-      propertyPath: m_text
-      value: "Navigate the level while searching for allies and the exit.\r\nSome
-        allies are <color=red>infected</color>, and could <color=red>potentially
-        infect others</color>.\r\nTrack down these <B>allies</B>, and bring them
-        to your <B>pocket universe</B>.\r\nMake sure to try and send them to the
-        <B>pocket universe</B> yourself.\r\n\nIf you get <color=red>caught</color>,
-        you won\u2019t be able to leave until the timer goes away.\r\nOnce there,
-        you can <B>screen</B> them and properly care for them.\r\nDo this by distancing
-        them from each other and masking them.\r\nYou get charges for these spells
-        by breaking barrels.\r\n\nYou can only cast however many times as the number
-        of charges.\r\nBe careful, because uninfected <B>allies</B> are in the <B>pocket
-        universe</B> too.\r\nShield them from whatever particles the infected send
-        out.\r\n\nOnce you exit, you will be revealed on how many allies you saved.\r\n\n<B>Do
-        your best to bring both infected and uninfected to safety!!!</B>\n"
-      objectReference: {fileID: 0}
-    - target: {fileID: 6709850411038246771, guid: f27e6dc96101a8841bfc7db6184e31cc,
+    - target: {fileID: 4933352232140040211, guid: f27e6dc96101a8841bfc7db6184e31cc,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 838
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6709850411038246771, guid: f27e6dc96101a8841bfc7db6184e31cc,
+    - target: {fileID: 4933352232140040211, guid: f27e6dc96101a8841bfc7db6184e31cc,
         type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 148
-      objectReference: {fileID: 0}
-    - target: {fileID: 6709850411038246771, guid: f27e6dc96101a8841bfc7db6184e31cc,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 17
-      objectReference: {fileID: 0}
-    - target: {fileID: 6709850411038246771, guid: f27e6dc96101a8841bfc7db6184e31cc,
-        type: 3}
-      propertyPath: m_firstOverflowCharacterIndex
-      value: 773
-      objectReference: {fileID: 0}
-    - target: {fileID: 6709850411038246771, guid: f27e6dc96101a8841bfc7db6184e31cc,
-        type: 3}
-      propertyPath: m_isRightToLeft
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6709850411038246771, guid: f27e6dc96101a8841bfc7db6184e31cc,
-        type: 3}
-      propertyPath: m_fontStyle
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6709850411038246771, guid: f27e6dc96101a8841bfc7db6184e31cc,
-        type: 3}
-      propertyPath: m_fontColor.r
-      value: 0.028301895
-      objectReference: {fileID: 0}
-    - target: {fileID: 6709850411038246771, guid: f27e6dc96101a8841bfc7db6184e31cc,
-        type: 3}
-      propertyPath: m_fontColor.g
-      value: 0.028301895
-      objectReference: {fileID: 0}
-    - target: {fileID: 6709850411038246771, guid: f27e6dc96101a8841bfc7db6184e31cc,
-        type: 3}
-      propertyPath: m_fontColor.b
-      value: 0.028301895
-      objectReference: {fileID: 0}
-    - target: {fileID: 6709850411038246771, guid: f27e6dc96101a8841bfc7db6184e31cc,
-        type: 3}
-      propertyPath: m_fontColor32.rgba
-      value: 4278650631
-      objectReference: {fileID: 0}
-    - target: {fileID: 6709850411038246771, guid: f27e6dc96101a8841bfc7db6184e31cc,
+    - target: {fileID: 4933352232140040211, guid: f27e6dc96101a8841bfc7db6184e31cc,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 144
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933352232140040211, guid: f27e6dc96101a8841bfc7db6184e31cc,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933352232140040211, guid: f27e6dc96101a8841bfc7db6184e31cc,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5101436617527698188, guid: f27e6dc96101a8841bfc7db6184e31cc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6709850411248985506, guid: f27e6dc96101a8841bfc7db6184e31cc,
         type: 3}
@@ -22809,11 +22832,6 @@ PrefabInstance:
       propertyPath: cursortypes.Array.data[4]
       value: 
       objectReference: {fileID: 1735493328}
-    - target: {fileID: 6709850411947853543, guid: f27e6dc96101a8841bfc7db6184e31cc,
-        type: 3}
-      propertyPath: m_FillAmount
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6709850412044319162, guid: f27e6dc96101a8841bfc7db6184e31cc,
         type: 3}
       propertyPath: allies
@@ -22859,11 +22877,6 @@ PrefabInstance:
       propertyPath: allies1
       value: 
       objectReference: {fileID: 3465024144212081692}
-    - target: {fileID: 6709850412882461835, guid: f27e6dc96101a8841bfc7db6184e31cc,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6709850412980674884, guid: f27e6dc96101a8841bfc7db6184e31cc,
         type: 3}
       propertyPath: m_Name
@@ -22931,6 +22944,12 @@ PrefabInstance:
       objectReference: {fileID: 1864007363}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f27e6dc96101a8841bfc7db6184e31cc, type: 3}
+--- !u!1 &6709850411620290257 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5101436617527698188, guid: f27e6dc96101a8841bfc7db6184e31cc,
+    type: 3}
+  m_PrefabInstance: {fileID: 6709850411620290256}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6886168075382255946 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 184286976657702810, guid: f27e6dc96101a8841bfc7db6184e31cc,

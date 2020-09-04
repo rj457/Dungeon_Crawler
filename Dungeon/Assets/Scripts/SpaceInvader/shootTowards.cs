@@ -8,16 +8,13 @@ public class shootTowards : MonoBehaviour
     Vector2 mousePos;
     public Scroller scroller;
     public InventoryObject inventory;
-    private float maskcooldown = 11;
     //mask properties 
     public GameObject spawnposition;
     public GameObject maskPrefab;
     public Vector3 clickedposition;
     //Stainerizer properties
-    private float stainerizercooldown = 11;
     public GameObject stainerizerPrefab;
     //wall properties
-    private float wallcooldown = 11;
     public GameObject wallPrefab;
     public GameObject exitbutton;
     //skillcooldown

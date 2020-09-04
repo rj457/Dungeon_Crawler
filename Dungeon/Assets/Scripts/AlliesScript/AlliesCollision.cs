@@ -28,7 +28,8 @@ public class AlliesCollision : MonoBehaviour
         if (alliesclicked && safnet)
         {
             StartCoroutine(dialogStart());
-            updateinfection(); 
+            updateinfection();
+            addAllyTagtoInventory();
         }
     }
  
@@ -43,6 +44,10 @@ public class AlliesCollision : MonoBehaviour
             infectionrecord.uninfectedallies += 1; 
         }
     }
+    void addAllyTagtoInventory()
+    {
+        infectionrecord.alliesTag.Add(gameObject.name);
+    }
     IEnumerator dialogStart()
     {
         safnet = false; 
@@ -56,22 +61,9 @@ public class AlliesCollision : MonoBehaviour
         textpro.text = thirdSentence;
         yield return new WaitForSeconds(3f); 
         rescueDialog.SetActive(false);
-        //update following status
-        updateSqawn();
         //distroy object 
         gameObject.SetActive(false);
 
-    }
-    void updateSqawn()
-    {
-        if (gameObject.name == "allies")
-        {
-            infectionrecord.alliesisfollow = true; 
-        }
-        else if (gameObject.name == "allies(1)")
-        {
-            infectionrecord.allies1isfollow = true; 
-        }
     }
     public void OnMouseEnter()
     {

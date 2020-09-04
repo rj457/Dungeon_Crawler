@@ -7,9 +7,9 @@ public class InventoryObject : ScriptableObject
 {
     public int uninfectedallies;
     public int infectedallies;
-    public bool alliesisfollow;
-    public bool allies1isfollow;
+    
     public List<string> enemyTag;
+    public List<string> alliesTag;
     //battle position
     public Vector3 initialvalue;
     public bool Isbattle;
